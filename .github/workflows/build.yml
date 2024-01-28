@@ -30,7 +30,7 @@ jobs:
           find . -name "*.*_ps3" -type f -delete
       - name: Build ARK
         run: |
-          lrb/dependencies/linux/arkhelper dir2ark ./_ark ./_build/xbox/gen -n "patch_xbox" -e -v 5
+          lrb/dependencies/linux/arkhelper dir2ark lrb/_ark lrb/_build/xbox/gen -n "patch_xbox" -e -v 5
       
       - name: Upload result
         uses: actions/upload-artifact@v2
@@ -65,7 +65,7 @@ jobs:
           find . -name "*.*_ps3" -type f -delete
       - name: Build ARK
         run: |
-          tbrb/dependencies/linux/arkhelper dir2ark ./_ark ./_build/xbox/gen -n "patch_xbox" -e -v 5
+          tbrb/dependencies/linux/arkhelper dir2ark tbrb/_ark tbrb/_build/xbox/gen -n "patch_xbox" -e -v 5
       
       - name: Upload result
         uses: actions/upload-artifact@v2
@@ -100,7 +100,7 @@ jobs:
           find . -name "*.*_ps3" -type f -delete
       - name: Build ARK
         run: |
-          gdrb/dependencies/linux/arkhelper dir2ark ./_ark ./_build/xbox/gen -n "patch_xbox" -e -v 5
+          gdrb/dependencies/linux/arkhelper dir2ark gdrb/_ark gdrb/_build/xbox/gen -n "patch_xbox" -e -v 5
       
       - name: Upload result
         uses: actions/upload-artifact@v2
