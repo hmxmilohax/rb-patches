@@ -38,7 +38,7 @@ jobs:
           name: LRBpatch-xbox
           path: lrb/_build/xbox
 
-tbrb_xbox:
+  tbrb_xbox:
     runs-on: ubuntu-latest
 
     steps:
@@ -73,7 +73,7 @@ tbrb_xbox:
           name: TBRBpatch-xbox
           path: tbrb/_build/xbox
 
-gdrb_xbox:
+  gdrb_xbox:
     runs-on: ubuntu-latest
 
     steps:
