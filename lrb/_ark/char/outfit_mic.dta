@@ -1,0 +1,70 @@
+(mic
+   (closet TRUE)
+   (sort FALSE)
+   (allow_none FALSE)
+   (outfits
+      (none)
+      (mic
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (mic_01
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (mic_02
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (mic_03
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (mic_04
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (mic_clasic
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (banjomic02
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (star_mic
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (neonmic02
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (freddy_mic
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (carrott_mic
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (dynamite_mic
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (ice_cream_mic
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (eye_mic
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (squid_mic
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (skullmic02
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))))

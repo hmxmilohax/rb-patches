@@ -1,0 +1,90 @@
+(drum
+   (closet TRUE)
+   (sort FALSE)
+   (allow_none FALSE)
+   (outfits
+      (none)
+      (molded_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (red_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (blue_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (littledrum_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (electronic_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (neon_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (popstar_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (dynamite_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (spike_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (classiclego_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (hobo_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (halloween_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (pirate_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (rocktopus_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (veg_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (monkey_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (tribal_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (ufo_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (plane_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (castle_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))
+      (trex_drumkit
+         (genre shell_shop_punkstore)
+         (cost 0)
+         (unlocked TRUE))))
