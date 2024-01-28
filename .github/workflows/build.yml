@@ -1,0 +1,109 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  lrb_xbox:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Download Mackiloha
+        run: |
+          pip install requests
+          python lrb/dependencies/dev_scripts/download_mackiloha.py
+      - name: Set env
+        run: |
+          echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+          chmod +x lrb/dependencies/linux/arkhelper
+          chmod +x lrb/dependencies/linux/dtab
+          chmod +x lrb/dependencies/linux/superfreq
+          pip install gitpython
+          pip install mido
+      - name: Remove PS3 files
+        run: |
+          find . -name "*.*_ps3" -type f -delete
+      - name: Build ARK
+        run: |
+          lrb/dependencies/linux/arkhelper dir2ark ./_ark ./_build/xbox/gen -n "patch_xbox" -e -v 5
+      
+      - name: Upload result
+        uses: actions/upload-artifact@v2
+        with:
+          name: LRBpatch-xbox
+          path: lrb/_build/xbox
+
+tbrb_xbox:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Download Mackiloha
+        run: |
+          pip install requests
+          python tbrb/dependencies/dev_scripts/download_mackiloha.py
+      - name: Set env
+        run: |
+          echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+          chmod +x tbrb/dependencies/linux/arkhelper
+          chmod +x tbrb/dependencies/linux/dtab
+          chmod +x tbrb/dependencies/linux/superfreq
+          pip install gitpython
+          pip install mido
+      - name: Remove PS3 files
+        run: |
+          find . -name "*.*_ps3" -type f -delete
+      - name: Build ARK
+        run: |
+          tbrb/dependencies/linux/arkhelper dir2ark ./_ark ./_build/xbox/gen -n "patch_xbox" -e -v 5
+      
+      - name: Upload result
+        uses: actions/upload-artifact@v2
+        with:
+          name: TBRBpatch-xbox
+          path: tbrb/_build/xbox
+
+gdrb_xbox:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Download Mackiloha
+        run: |
+          pip install requests
+          python gdrb/dependencies/dev_scripts/download_mackiloha.py
+      - name: Set env
+        run: |
+          echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+          chmod +x gdrb/dependencies/linux/arkhelper
+          chmod +x gdrb/dependencies/linux/dtab
+          chmod +x gdrb/dependencies/linux/superfreq
+          pip install gitpython
+          pip install mido
+      - name: Remove PS3 files
+        run: |
+          find . -name "*.*_ps3" -type f -delete
+      - name: Build ARK
+        run: |
+          gdrb/dependencies/linux/arkhelper dir2ark ./_ark ./_build/xbox/gen -n "patch_xbox" -e -v 5
+      
+      - name: Upload result
+        uses: actions/upload-artifact@v2
+        with:
+          name: GDRBpatch-xbox
+          path: gdrb/_build/xbox
