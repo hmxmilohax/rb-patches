@@ -35,7 +35,7 @@ jobs:
       - name: Upload result
         uses: actions/upload-artifact@v2
         with:
-          name: LRBpatch-xbox
+          name: LRB-Patch-Xbox
           path: lrb/_build/xbox
 
   tbrb_xbox:
@@ -70,7 +70,7 @@ jobs:
       - name: Upload result
         uses: actions/upload-artifact@v2
         with:
-          name: TBRBpatch-xbox
+          name: TBRB-Patch-Xbox
           path: tbrb/_build/xbox
 
   gdrb_xbox:
@@ -105,5 +105,5 @@ jobs:
       - name: Upload result
         uses: actions/upload-artifact@v2
         with:
-          name: GDRBpatch-xbox
+          name: GDRB-Patch-Xbox
           path: gdrb/_build/xbox
