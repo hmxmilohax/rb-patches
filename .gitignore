@@ -1,0 +1,8 @@
+*.hdr
+*.ark
+arkhelper*
+dtab*
+superfreq*
+*.zip
+__pycache__
+_xenia
