@@ -61,7 +61,7 @@ jobs:
           python lrb/dependencies/dev_scripts/download_ta_pkg_repacker.py
       - name: Remove Xbox files
         run: |
-          Get-ChildItem _ark/ -recurse -include *.*_xbox | remove-item
+          Get-ChildItem lrb/_ark/ -recurse -include *.*_xbox | remove-item
       - name: Build ARK
         run: |
           lrb/dependencies/windows/arkhelper.exe dir2ark lrb/_ark lrb/_build/ps3/USRDIR/gen -n "patch_ps3" -e -v 5
