@@ -70,7 +70,7 @@ jobs:
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP1018-BLUS30382_00-LEGORCKBPATCH"
           $packageversion="1.01"
-          lrb/dependencies/ta_pkg_repacker_tools/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) dependencies/ta_pkg_repacker_tools/package.conf lrb/_build/ps3
+          lrb/dependencies/ta_pkg_repacker_tools/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) lrb/dependencies/ta_pkg_repacker_tools/package.conf lrb/_build/ps3
 
       - name: Upload result
         uses: actions/upload-artifact@v3
