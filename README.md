@@ -2,7 +2,7 @@
  
 Small patches to vanilla RB games that add small quality-of-life improvements
 
-**NOTE: The "strum limit" is left *intact* on all of these, all FCs and scores are valid**
+**NOTE: The "strum limit" is left *intact* on all of these on XBOX ONLY**
 
 </br>
 
@@ -40,7 +40,7 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 
 ### 📥 [TBRB Patch (Xbox)](https://nightly.link/lunalawl/rb-patches/workflows/build/main/TBRB-Patch-Xbox.zip)
 ### 📥 [GDRB Patch (Xbox)](https://nightly.link/lunalawl/rb-patches/workflows/build/main/GDRB-Patch-Xbox.zip)
-### 📥 [LRB Patch (Xbox)](https://nightly.link/lunalawl/rb-patches/workflows/build/main/LRB-Patch-Xbox.zip)
+### 📥 [LRB Patch (Xbox)](https://nightly.link/lunalawl/rb-patches/workflows/build/main/LRB-Patch-Xbox.zip) 📥 [LRB Patch (PS3)](https://nightly.link/lunalawl/rb-patches/workflows/build/main/LRB-Patch-PS3.zip)
 
 </br>
 
