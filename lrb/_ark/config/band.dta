@@ -7,6 +7,7 @@
 (1)
 #endif
 #include macros.dta
+#include ../dx/dx_macros.dta
 (band_version
    #include band_version.dta)
 (mem

@@ -20,15 +20,15 @@
       {meta music_stop}
       {meta delete_meta_music}
       {synth play bwt_practice_amb.cue}
-      #ifdef HX_PS3
-      {rnd set_sync 2}
-      #endif
+;      #ifdef HX_PS3
+;      {rnd set_sync 2}
+;      #endif
       {[postprocess]
          select})
    (exit
-      #ifdef HX_PS3
-      {rnd set_sync 1}
-      #endif
+;      #ifdef HX_PS3
+;      {rnd set_sync 1}
+;      #endif
       {rnd reset_postproc})
    (load
       {if

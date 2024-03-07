@@ -24,12 +24,14 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 
 ### LRB:
 
-- 30FPS venues
+- Adjustable venue FPS via external `config.dta` file
 - Songs of any rating can be played
 - UGC songs can be played (RBN, customs)
 - All prefabs available
 - All Rock Shop items unlocked
 - Holiday DLC minifigures
+- Additional practice speeds
+- SELECT button restarts current practice section
 - Vocal practice mode
 
 </br>
