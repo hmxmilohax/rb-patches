@@ -30,6 +30,7 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 - All prefabs available
 - All Rock Shop items unlocked
 - Holiday DLC minifigures
+- Vocal practice mode
 
 </br>
 
