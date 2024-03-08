@@ -1,0 +1,7 @@
+; --   THIS CONFIGURATION FILE IS REQUIRED TO BE PRESENT    --
+; -- OR ELSE THE GAME WILL CRASH WHEN TRYING TO LOAD A SONG --
+
+; Venue FPS (Default: 24, can go up to 60)
+(venue_fps
+   (venue_fps 24)
+)

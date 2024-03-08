@@ -1,0 +1,6 @@
+#ifdef HX_XBOX
+"Build: 081112"
+#endif
+#ifdef HX_PS3
+"Build: 081104"
+#endif
