@@ -1,4 +1,5 @@
 #include macros.dta
+#include ../dx/dx_macros.dta
 (mem
    #include mem.dta)
 (content_mgr
@@ -70,8 +71,8 @@
    #include synth.dta)
 (joypad
    (ignore)
-   (hold_ms 1000)
-   (repeat_ms 80)
+   (hold_ms 300)
+   (repeat_ms 50)
    (midi_joypad
       (disable FALSE))
    (controller_mapping

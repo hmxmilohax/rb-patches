@@ -9,6 +9,7 @@
    (movie_done
       {ui goto_screen intro_to_splash_screen})
    (enter
+      {profile_mgr set_overscan TRUE}
       {platform_mgr disable_xmp}
       kDataUnhandled)
    (BUTTON_DOWN_MSG

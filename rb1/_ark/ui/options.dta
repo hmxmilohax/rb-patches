@@ -1049,23 +1049,23 @@
    (TRANSITION_COMPLETE_MSG
       {autoload})}
 {func
-   increment_to_5mult
+   increment_to_1mult
    ($value)
    {'*'
       {'+'
          {floor
-            {/ $value 5.0}}
+            {/ $value 1.0}}
          1}
-      5}}
+      1}}
 {func
-   decrement_to_5mult
+   decrement_to_1mult
    ($value)
    {'*'
       {-
          {ceil
-            {/ $value 5.0}}
+            {/ $value 1.0}}
          1}
-      5}}
+      1}}
 {new
    AudioLatencyPanel
    calibrate_av_chooser_manual_panel
@@ -1177,12 +1177,12 @@
          ((kPad_DUp kPad_DRight)
             {$this
                set_latency
-               {increment_to_5mult
+               {increment_to_1mult
                   {profile_mgr get_song_to_taskmgr_ms_ui}}})
          ((kPad_DDown kPad_DLeft)
             {$this
                set_latency
-               {decrement_to_5mult
+               {decrement_to_1mult
                   {profile_mgr get_song_to_taskmgr_ms_ui}}})
          kDataUnhandled})
    (SELECT_MSG
@@ -1767,12 +1767,12 @@
          ((kPad_DDown kPad_DLeft)
             {$this
                set_lag
-               {decrement_to_5mult
+               {decrement_to_1mult
                   {profile_mgr get_sync_offset_ui}}})
          ((kPad_DUp kPad_DRight)
             {$this
                set_lag
-               {increment_to_5mult
+               {increment_to_1mult
                   {profile_mgr get_sync_offset_ui}}})
          kDataUnhandled})
    (SELECT_MSG
