@@ -206,7 +206,7 @@ jobs:
       - name: Build PKG
         run: |
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
-          $content="UP0006-BLUS30282_00-TBRBPATCHH"
+          $content="UP0006-BLUS30282_00-TBRBPATCH"
           $packageversion="1.00"
           tbrb/dependencies/ta_pkg_repacker_tools/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) tbrb/dependencies/ta_pkg_repacker_tools/package.conf tbrb/_build/ps3
 
