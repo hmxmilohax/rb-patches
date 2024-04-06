@@ -20,6 +20,7 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 - Additional practice speeds
 - SELECT button restarts current practice section
 - Vocal practice mode
+- Video Overscan enabled by default
 
 ### TBRB:
 
