@@ -180,6 +180,42 @@ jobs:
           name: TBRB-Patch-Xbox
           path: tbrb/_build/xbox
 
+  tbrb_ps3:
+    runs-on: windows-2019
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Set env
+        run: |
+          pip install gitpython
+          pip install mido
+          pip install requests
+      - name: fetch TrueAncestor PKG Repacker
+        run: |
+          python tbrb/dependencies/dev_scripts/download_ta_pkg_repacker.py
+      - name: Remove Xbox files
+        run: |
+          Get-ChildItem tbrb/_ark/ -recurse -include *.*_xbox | remove-item
+      - name: Build ARK
+        run: |
+          tbrb/dependencies/windows/arkhelper.exe dir2ark tbrb/_ark tbrb/_build/ps3/USRDIR/gen -n "patch_ps3" -e -v 4 -f
+      - name: Build PKG
+        run: |
+          $sha_short="$(git rev-parse --short HEAD)".ToUpper()
+          $content="UP0006-BLUS30282_00-TBRBPATCHH"
+          $packageversion="1.00"
+          tbrb/dependencies/ta_pkg_repacker_tools/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) tbrb/dependencies/ta_pkg_repacker_tools/package.conf tbrb/_build/ps3
+
+      - name: Upload result
+        uses: actions/upload-artifact@v3
+        with:
+          name: TBRB-Patch-PS3
+          path: '*.pkg'
+
   gdrb_xbox:
     runs-on: ubuntu-latest
 
