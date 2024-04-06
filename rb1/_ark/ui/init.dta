@@ -1,3 +1,5 @@
+{set $emulatefps 24}
+
 #define TOUR_LOGGING
 (1)
 #include global.dta
