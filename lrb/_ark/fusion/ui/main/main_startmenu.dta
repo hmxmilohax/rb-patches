@@ -1,4 +1,5 @@
 {set $emulatefps 24}
+#ifndef _SHIP {tour toggle_all_unlock} #endif
 
 #define DEFAULT_SPLASH_ALPHA_THRESHOLD
 (175.0)

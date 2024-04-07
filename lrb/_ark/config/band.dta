@@ -105,8 +105,8 @@
    (np_communication_id
       "NPWR00856_00")
    (titles
+      #ifdef _LRB_REGION_EU
       (lrb
-         #ifdef _LRB_REGION_EU
          (title_id
             (live
                "BLES00636")
@@ -117,7 +117,8 @@
                "EP1018-BLES00636_00")
             (test
                "UP0006-NPXX00360_00"))
-         #else
+      )
+      (lrb_usa
          (title_id
             (live
                "BLUS30382")
@@ -128,7 +129,7 @@
                "UP1018-BLUS30382_00")
             (test
                "UP0006-NPXX00360_00"))
-         #endif)
+      )
       (rb2
          (title_id
             (live
@@ -139,16 +140,65 @@
             (live
                "UP0006-BLUS30147_00")
             (test
-               "UP0006-NPXX00360_00")))
-      #ifdef _LRB_REGION_EU
+               "UP0006-NPXX00360_00"))
+      )
       (rb1
          (title_id
             (live
                "BLES00228"))
          (service_id
             (live
-               "EP0006-BLES00228_00")))
+               "EP0006-BLES00228_00"))
+      )
+      (rb1_usa
+         (title_id
+            (live
+               "BLUS30050")
+            (test
+               "NPXX00202"))
+         (service_id
+            (live
+               "UP0006-BLUS30050_00")
+            (test
+               "UD2464-NPXX00202_00"))
+      )
       #else
+      (lrb
+         (title_id
+            (live
+               "BLUS30382")
+            (test
+               "NPXX00360"))
+         (service_id
+            (live
+               "UP1018-BLUS30382_00")
+            (test
+               "UP0006-NPXX00360_00"))
+      )
+      (lrb_eur
+         (title_id
+            (live
+               "BLES00636")
+            (test
+               "NPXX00360"))
+         (service_id
+            (live
+               "EP1018-BLES00636_00")
+            (test
+               "UP0006-NPXX00360_00"))
+      )
+      (rb2
+         (title_id
+            (live
+               "BLUS30147")
+            (test
+               "NPXX00360"))
+         (service_id
+            (live
+               "UP0006-BLUS30147_00")
+            (test
+               "UP0006-NPXX00360_00"))
+      )
       (rb1
          (title_id
             (live
@@ -159,8 +209,18 @@
             (live
                "UP0006-BLUS30050_00")
             (test
-               "UD2464-NPXX00202_00")))
-      #endif)
+               "UD2464-NPXX00202_00"))
+      )
+      (rb1_eur
+         (title_id
+            (live
+               "BLES00228"))
+         (service_id
+            (live
+               "EP0006-BLES00228_00"))
+      )
+      #endif
+   )
    #endif
    #ifdef HX_WII
    (load_commerce_container $commerce)

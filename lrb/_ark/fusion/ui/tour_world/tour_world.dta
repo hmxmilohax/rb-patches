@@ -638,11 +638,13 @@
    (enter
       {tour_world_bg_panel play_town_loop TRUE}
       {input_mgr set_limit kLimitSessionLeader})}
+#ifdef _SHIP ; i have no fucking clue why but debug crashes if this is here
 {new
    BandScreen
    song_select_tour_screen
    (panels meta postsong_sfx_panel tour_world_bg_panel song_select_details_panel song_select_panel tour_world_lower3rd_panel song_sync_panel)
    COMMON_SONG_SELECT_SCREEN}
+#endif
 {new
    UIPanel
    tour_world_details_panel
