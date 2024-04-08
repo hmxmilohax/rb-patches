@@ -543,7 +543,7 @@
    (clear_setlist FALSE)
    (saved_setlist FALSE)
    (enter
-      {song.lst set scroll_time 0}
+      {$this iterate UIList $l {$l set scroll_time 0}}
       #ifdef KIOSK_DEMO
       {if
          {exists sort.lbl}
