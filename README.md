@@ -16,7 +16,11 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 
 ### RB1:
 
-- Adjustable venue FPS via external `config.dta` file
+- Adjustable options via external `config.dta` file:
+	- Venue FPS
+	- Black Background
+	- Performance Mode
+	- Autoplay (disables saving, online)
 - Additional practice speeds
 - SELECT button restarts current practice section
 - Vocal practice mode

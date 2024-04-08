@@ -226,6 +226,7 @@
          {handle
             (game beat)}})
    (downbeat
+      {unless $dx_performance_mode {if $dx_autoplay {beatmatch foreach_active_player $player {unless {mod $measure 4} {$player deploy_if_possible}}}}}
       {if_else
          $world
          {handle

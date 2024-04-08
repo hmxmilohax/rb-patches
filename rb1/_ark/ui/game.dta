@@ -57,6 +57,8 @@
          (script
             {handle
                ($this intro_end)})}
+      INIT_DTA_READER
+      {world_panel set_showing {! $dx_black_background}}
       kDataUnhandled)
    (intro_skip
       {$this start_game}
@@ -251,6 +253,7 @@
    (enter
       INIT_DTA_READER
       DX_FPS_SETUP
+      {if $dx_autoplay {do {beatmatch foreach_active_player $player {$player set_auto_play enable}}}}
       {set
          [delayed_mic_check]
          FALSE}

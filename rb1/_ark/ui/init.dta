@@ -1,4 +1,4 @@
-{set $emulatefps 24}
+#include ../dx/dx_init.dta
 
 #define TOUR_LOGGING
 (1)
