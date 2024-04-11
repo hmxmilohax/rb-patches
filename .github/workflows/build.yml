@@ -62,7 +62,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: RB1-Patch-PS3
-          path: '*.pkg'
+          path: 'rb1/*.pkg'
 
   lrb_xbox:
     runs-on: ubuntu-latest
@@ -123,7 +123,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: LRB-Patch-PS3
-          path: '*.pkg'
+          path: 'lrb/*.pkg'
 
   tbrb_xbox:
     runs-on: ubuntu-latest
@@ -184,7 +184,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: TBRB-Patch-PS3
-          path: '*.pkg'
+          path: 'tbrb/*.pkg'
 
   gdrb_xbox:
     runs-on: ubuntu-latest
