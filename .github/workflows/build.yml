@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: RB1-Patch-Xbox
-          path: out/xbox
+          path: rb1/out/xbox
 
   rb1_ps3:
     runs-on: windows-2019
@@ -53,6 +53,7 @@ jobs:
           dependencies/windows/ninja.exe
       - name: Build PKG
         run: |
+          cd rb1/
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP1018-BLUS30050_00-RB1PATCHH"
           $packageversion="1.07"
@@ -92,7 +93,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: LRB-Patch-Xbox
-          path: out/xbox
+          path: lrb/out/xbox
 
   lrb_ps3:
     runs-on: windows-2019
@@ -113,6 +114,7 @@ jobs:
           dependencies/windows/ninja.exe
       - name: Build PKG
         run: |
+          cd lrb/
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP1018-BLUS30382_00-LRBPATCHH"
           $packageversion="1.01"
@@ -133,7 +135,7 @@ jobs:
           python-version: '3.11'
       - name: Build ARK
         run: |
-          cd tbrb
+          cd tbrb/
           chmod +x dependencies/python/configure_build.py
           chmod +x dependencies/python/gen_version.py
           chmod +x dependencies/python/png_list.py
@@ -152,7 +154,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: TBRB-Patch-Xbox
-          path: out/xbox
+          path: tbrb/out/xbox
 
   tbrb_ps3:
     runs-on: windows-2019
@@ -173,6 +175,7 @@ jobs:
           dependencies/windows/ninja.exe
       - name: Build PKG
         run: |
+          cd tbrb/
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP0006-BLUS30282_00-TBRBPATCH"
           $packageversion="1.00"
@@ -212,7 +215,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: GDRB-Patch-Xbox
-          path: out/xbox
+          path: gdrb/out/xbox
 
   gdrb_ps3:
     runs-on: ubuntu-latest
@@ -243,4 +246,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: GDRB-Patch-PS3
-          path: out/ps3
+          path: gdrb/out/ps3
