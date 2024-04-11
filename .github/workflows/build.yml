@@ -13,6 +13,9 @@ jobs:
           python-version: '3.11'
       - name: Build ARK
         run: |
+          chmod +x rb1/dependencies/python/configure_build.py
+          chmod +x rb1/dependencies/python/gen_version.py
+          chmod +x rb1/dependencies/python/png_list.py
           chmod +x rb1/dependencies/linux/ninja
           chmod +x rb1/dependencies/linux/arkhelper
           chmod +x rb1/dependencies/linux/dtab
@@ -68,6 +71,9 @@ jobs:
           python-version: '3.11'
       - name: Build ARK
         run: |
+          chmod +x lrb/dependencies/python/configure_build.py
+          chmod +x lrb/dependencies/python/gen_version.py
+          chmod +x lrb/dependencies/python/png_list.py
           chmod +x lrb/dependencies/linux/ninja
           chmod +x lrb/dependencies/linux/arkhelper
           chmod +x lrb/dependencies/linux/dtab
@@ -123,6 +129,9 @@ jobs:
           python-version: '3.11'
       - name: Build ARK
         run: |
+          chmod +x tbrb/dependencies/python/configure_build.py
+          chmod +x tbrb/dependencies/python/gen_version.py
+          chmod +x tbrb/dependencies/python/png_list.py
           chmod +x tbrb/dependencies/linux/ninja
           chmod +x tbrb/dependencies/linux/arkhelper
           chmod +x tbrb/dependencies/linux/dtab
@@ -178,6 +187,9 @@ jobs:
           python-version: '3.11'
       - name: Build ARK
         run: |
+          chmod +x gdrb/dependencies/python/configure_build.py
+          chmod +x gdrb/dependencies/python/gen_version.py
+          chmod +x gdrb/dependencies/python/png_list.py
           chmod +x gdrb/dependencies/linux/ninja
           chmod +x gdrb/dependencies/linux/arkhelper
           chmod +x gdrb/dependencies/linux/dtab
@@ -205,6 +217,9 @@ jobs:
           python-version: '3.11'
       - name: Build ARK
         run: |
+          chmod +x gdrb/dependencies/python/configure_build.py
+          chmod +x gdrb/dependencies/python/gen_version.py
+          chmod +x gdrb/dependencies/python/png_list.py
           chmod +x gdrb/dependencies/linux/ninja
           chmod +x gdrb/dependencies/linux/arkhelper
           chmod +x gdrb/dependencies/linux/dtab
