@@ -52,10 +52,10 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 
 # 📥 Downloads
 
-### 📥 [RB1 Patch (Xbox)](https://nightly.link/lunalawl/rb-patches/workflows/build/main/RB1-Patch-Xbox.zip) 📥 [RB1 Patch (PS3)](https://nightly.link/lunalawl/rb-patches/workflows/build/main/RB1-Patch-PS3.zip) *RPCS3 only!
-### 📥 [TBRB Patch (Xbox)](https://nightly.link/lunalawl/rb-patches/workflows/build/main/TBRB-Patch-Xbox.zip)
-### 📥 [GDRB Patch (Xbox)](https://nightly.link/lunalawl/rb-patches/workflows/build/main/GDRB-Patch-Xbox.zip)
-### 📥 [LRB Patch (Xbox)](https://nightly.link/lunalawl/rb-patches/workflows/build/main/LRB-Patch-Xbox.zip) 📥 [LRB Patch (PS3)](https://nightly.link/lunalawl/rb-patches/workflows/build/main/LRB-Patch-PS3.zip)
+### 📥 [RB1 Patch (Xbox)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/RB1-Patch-Xbox.zip) 📥 [RB1 Patch (PS3)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/RB1-Patch-PS3.zip) *RPCS3 only!
+### 📥 [TBRB Patch (Xbox)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/TBRB-Patch-Xbox.zip)
+### 📥 [GDRB Patch (Xbox)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/GDRB-Patch-Xbox.zip)
+### 📥 [LRB Patch (Xbox)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/LRB-Patch-Xbox.zip) 📥 [LRB Patch (PS3)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/LRB-Patch-PS3.zip)
 
 </br>
 
