@@ -5,248 +5,189 @@ on: [push, pull_request]
 jobs:
   rb1_xbox:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
-      - name: Set env
-        run: |
-          echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
-          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-          chmod +x rb1/dependencies/linux/arkhelper
-          chmod +x rb1/dependencies/linux/dtab
-          chmod +x rb1/dependencies/linux/superfreq
-          pip install gitpython
-          pip install mido
-      - name: Remove PS3 files
-        run: |
-          find . -name "*.*_ps3" -type f -delete
+          python-version: '3.11'
       - name: Build ARK
         run: |
-          rb1/dependencies/linux/arkhelper dir2ark rb1/_ark rb1/_build/xbox/gen -n "patch_xbox" -e -v 4 -f
-      
+          rb1/dependencies/python/configure_build.py xbox
+          rb1/dependencies/linux/ninja
+      - name: Remove .gitkeep
+        run: |
+          find . -name ".gitkeep" -type f -delete
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: RB1-Patch-Xbox
-          path: rb1/_build/xbox
+          path: rb1/out/xbox
 
   rb1_ps3:
     runs-on: windows-2019
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: GuillaumeFalourd/command-output-file-action@v1.1
         with:
-          python-version: '3.9'
-      - name: Set env
-        run: |
-          pip install gitpython
-          pip install mido
-          pip install requests
-      - name: fetch TrueAncestor PKG Repacker
-        run: |
-          python rb1/dependencies/dev_scripts/download_ta_pkg_repacker.py
-      - name: Remove Xbox files
-        run: |
-          Get-ChildItem rb1/_ark/ -recurse -include *.*_xbox | remove-item
+          command_line: echo InstallDirectory = BLUS30050
+          output_file_name: rb1/ps3_package.conf
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: Build ARK
         run: |
-          rb1/dependencies/windows/arkhelper.exe dir2ark rb1/_ark rb1/_build/ps3/USRDIR/gen -n "patch_ps3" -e -v 4 -f
+          python rb1/dependencies/python/configure_build.py ps3
+          rb1/dependencies/windows/ninja.exe
       - name: Build PKG
         run: |
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP1018-BLUS30050_00-RB1PATCHH"
           $packageversion="1.07"
-          rb1/dependencies/ta_pkg_repacker_tools/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) rb1/dependencies/ta_pkg_repacker_tools/package.conf rb1/_build/ps3
-
+          rb1/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) rb1/ps3_package.conf out/ps3
       - name: Upload result
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: RB1-Patch-PS3
           path: '*.pkg'
 
   lrb_xbox:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
-      - name: Download Mackiloha
-        run: |
-          pip install requests
-          python lrb/dependencies/dev_scripts/download_mackiloha.py
-      - name: Set env
-        run: |
-          echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
-          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-          chmod +x lrb/dependencies/linux/arkhelper
-          chmod +x lrb/dependencies/linux/dtab
-          chmod +x lrb/dependencies/linux/superfreq
-          pip install gitpython
-          pip install mido
-      - name: Remove PS3 files
-        run: |
-          find . -name "*.*_ps3" -type f -delete
+          python-version: '3.11'
       - name: Build ARK
         run: |
-          lrb/dependencies/linux/arkhelper dir2ark lrb/_ark lrb/_build/xbox/gen -n "patch_xbox" -e -v 5
-      
+          lrb/dependencies/python/configure_build.py xbox
+          lrb/dependencies/linux/ninja
+      - name: Remove .gitkeep
+        run: |
+          find . -name ".gitkeep" -type f -delete
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: LRB-Patch-Xbox
           path: lrb/_build/xbox
 
   lrb_ps3:
     runs-on: windows-2019
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: GuillaumeFalourd/command-output-file-action@v1.1
         with:
-          python-version: '3.9'
-      - name: Download Mackiloha
-        run: |
-          pip install requests
-          python lrb/dependencies/dev_scripts/download_mackiloha.py
-      - name: Set env
-        run: |
-          pip install gitpython
-          pip install mido
-          pip install requests
-      - name: fetch TrueAncestor PKG Repacker
-        run: |
-          python lrb/dependencies/dev_scripts/download_ta_pkg_repacker.py
-      - name: Remove Xbox files
-        run: |
-          Get-ChildItem lrb/_ark/ -recurse -include *.*_xbox | remove-item
+          command_line: echo InstallDirectory = BLUS30050
+          output_file_name: lrb/ps3_package.conf
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: Build ARK
         run: |
-          lrb/dependencies/windows/arkhelper.exe dir2ark lrb/_ark lrb/_build/ps3/USRDIR/gen -n "patch_ps3" -e -v 5
+          python lrb/dependencies/python/configure_build.py ps3
+          lrb/dependencies/windows/ninja.exe
       - name: Build PKG
         run: |
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP1018-BLUS30382_00-LRBPATCHH"
           $packageversion="1.01"
-          lrb/dependencies/ta_pkg_repacker_tools/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) lrb/dependencies/ta_pkg_repacker_tools/package.conf lrb/_build/ps3
-
+          lrb/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) lrb/ps3_package.conf out/ps3
       - name: Upload result
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: LRB-Patch-PS3
           path: '*.pkg'
 
   tbrb_xbox:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
-      - name: Download Mackiloha
-        run: |
-          pip install requests
-          python tbrb/dependencies/dev_scripts/download_mackiloha.py
-      - name: Set env
-        run: |
-          echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
-          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-          chmod +x tbrb/dependencies/linux/arkhelper
-          chmod +x tbrb/dependencies/linux/dtab
-          chmod +x tbrb/dependencies/linux/superfreq
-          pip install gitpython
-          pip install mido
-      - name: Remove PS3 files
-        run: |
-          find . -name "*.*_ps3" -type f -delete
+          python-version: '3.11'
       - name: Build ARK
         run: |
-          tbrb/dependencies/linux/arkhelper dir2ark tbrb/_ark tbrb/_build/xbox/gen -n "patch_xbox" -e -v 5
-      
+          tbrb/dependencies/python/configure_build.py xbox
+          tbrb/dependencies/linux/ninja
+      - name: Remove .gitkeep
+        run: |
+          find . -name ".gitkeep" -type f -delete
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: TBRB-Patch-Xbox
           path: tbrb/_build/xbox
 
   tbrb_ps3:
     runs-on: windows-2019
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: GuillaumeFalourd/command-output-file-action@v1.1
         with:
-          python-version: '3.9'
-      - name: Set env
-        run: |
-          pip install gitpython
-          pip install mido
-          pip install requests
-      - name: fetch TrueAncestor PKG Repacker
-        run: |
-          python tbrb/dependencies/dev_scripts/download_ta_pkg_repacker.py
-      - name: Remove Xbox files
-        run: |
-          Get-ChildItem tbrb/_ark/ -recurse -include *.*_xbox | remove-item
+          command_line: echo InstallDirectory = BLUS30050
+          output_file_name: tbrb/ps3_package.conf
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: Build ARK
         run: |
-          tbrb/dependencies/windows/arkhelper.exe dir2ark tbrb/_ark tbrb/_build/ps3/USRDIR/gen -n "patch_ps3" -e -v 4 -f
+          python tbrb/dependencies/python/configure_build.py ps3
+          tbrb/dependencies/windows/ninja.exe
       - name: Build PKG
         run: |
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP0006-BLUS30282_00-TBRBPATCH"
           $packageversion="1.00"
-          tbrb/dependencies/ta_pkg_repacker_tools/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) tbrb/dependencies/ta_pkg_repacker_tools/package.conf tbrb/_build/ps3
-
+          tbrb/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) tbrb/ps3_package.conf out/ps3
       - name: Upload result
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: TBRB-Patch-PS3
           path: '*.pkg'
 
   gdrb_xbox:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
-      - name: Download Mackiloha
-        run: |
-          pip install requests
-          python gdrb/dependencies/dev_scripts/download_mackiloha.py
-      - name: Set env
-        run: |
-          echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
-          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-          chmod +x gdrb/dependencies/linux/arkhelper
-          chmod +x gdrb/dependencies/linux/dtab
-          chmod +x gdrb/dependencies/linux/superfreq
-          pip install gitpython
-          pip install mido
-      - name: Remove PS3 files
-        run: |
-          find . -name "*.*_ps3" -type f -delete
+          python-version: '3.11'
       - name: Build ARK
         run: |
-          gdrb/dependencies/linux/arkhelper dir2ark gdrb/_ark gdrb/_build/xbox/gen -n "patch_xbox" -e -v 5
-      
+          gdrb/dependencies/python/configure_build.py xbox
+          gdrb/dependencies/linux/ninja
+      - name: Remove .gitkeep
+        run: |
+          find . -name ".gitkeep" -type f -delete
       - name: Upload result
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: GDRB-Patch-Xbox
           path: gdrb/_build/xbox
+
+  gdrb_ps3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build ARK
+        run: |
+          gdrb/dependencies/python/configure_build.py ps3
+          gdrb/dependencies/linux/ninja
+      - name: Remove .gitkeep
+        run: |
+          find . -name ".gitkeep" -type f -delete
+      - name: Upload result
+        uses: actions/upload-artifact@v4
+        with:
+          name: GDRB-Patch-PS3
+          path: gdrb/_build/ps3

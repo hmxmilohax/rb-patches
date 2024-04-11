@@ -2,3 +2,14 @@
 *.ark
 __pycache__
 _xenia
+
+#funny files that should never be committed
+.DS_Store
+*.pyc
+*.tmp
+*.ninja
+.ninja_log
+
+#ninja build dirs
+obj
+out
