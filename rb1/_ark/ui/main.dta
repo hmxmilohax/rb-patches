@@ -11,6 +11,7 @@
    (enter
       #ifdef HX_PS3 {profile_mgr set_overscan TRUE} #endif
       {platform_mgr disable_xmp}
+      {ui goto_screen splash_screen}
       kDataUnhandled)
    (BUTTON_DOWN_MSG
       {if
@@ -119,6 +120,12 @@
    (enter_time 0.0)
    (attract_timeout_done FALSE)
    (enter
+      {logo.tex set_bitmap "dx/custom_textures/main/logo_dx.png"}
+
+      {logo.mesh set_local_scale_index 0 {* {logo.mesh get_local_scale_index 0} 0.85}}
+      {logo.mesh set_local_scale_index 1 {* {logo.mesh get_local_scale_index 1} 0.85}}
+      {logo.mesh set_local_scale_index 2 {* {logo.mesh get_local_scale_index 2} 0.85}}
+      {logo.mesh set_local_pos_index 2 {+ {logo.mesh get_local_pos_index 2} 20}}
       {set
          [enter_time]
          {taskmgr ui_seconds}}
