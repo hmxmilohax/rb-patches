@@ -13,17 +13,18 @@ jobs:
           python-version: '3.11'
       - name: Build ARK
         run: |
-          chmod +x rb1/dependencies/python/configure_build.py
-          chmod +x rb1/dependencies/python/gen_version.py
-          chmod +x rb1/dependencies/python/png_list.py
-          chmod +x rb1/dependencies/linux/ninja
-          chmod +x rb1/dependencies/linux/arkhelper
-          chmod +x rb1/dependencies/linux/dtab
-          chmod +x rb1/dependencies/linux/dtacheck
-          chmod +x rb1/dependencies/linux/superfreq
-          chmod +x rb1/dependencies/linux/swap_art_bytes
-          rb1/dependencies/python/configure_build.py xbox
-          rb1/dependencies/linux/ninja
+          cd rb1/
+          chmod +x dependencies/python/configure_build.py
+          chmod +x dependencies/python/gen_version.py
+          chmod +x dependencies/python/png_list.py
+          chmod +x dependencies/linux/ninja
+          chmod +x dependencies/linux/arkhelper
+          chmod +x dependencies/linux/dtab
+          chmod +x dependencies/linux/dtacheck
+          chmod +x dependencies/linux/superfreq
+          chmod +x dependencies/linux/swap_art_bytes
+          dependencies/python/configure_build.py xbox
+          dependencies/linux/ninja
       - name: Remove .gitkeep
         run: |
           find . -name ".gitkeep" -type f -delete
@@ -31,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: RB1-Patch-Xbox
-          path: rb1/out/xbox
+          path: out/xbox
 
   rb1_ps3:
     runs-on: windows-2019
@@ -40,21 +41,22 @@ jobs:
       - uses: GuillaumeFalourd/command-output-file-action@v1.1
         with:
           command_line: echo InstallDirectory = BLUS30050
-          output_file_name: rb1/ps3_package.conf
+          output_file_name: ps3_package.conf
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Build ARK
         run: |
-          python rb1/dependencies/python/configure_build.py ps3
-          rb1/dependencies/windows/ninja.exe
+          cd rb1/
+          python dependencies/python/configure_build.py ps3
+          dependencies/windows/ninja.exe
       - name: Build PKG
         run: |
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP1018-BLUS30050_00-RB1PATCHH"
           $packageversion="1.07"
-          rb1/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) rb1/ps3_package.conf out/ps3
+          dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) ps3_package.conf out/ps3
       - name: Upload result
         uses: actions/upload-artifact@v4
         with:
@@ -71,17 +73,18 @@ jobs:
           python-version: '3.11'
       - name: Build ARK
         run: |
-          chmod +x lrb/dependencies/python/configure_build.py
-          chmod +x lrb/dependencies/python/gen_version.py
-          chmod +x lrb/dependencies/python/png_list.py
-          chmod +x lrb/dependencies/linux/ninja
-          chmod +x lrb/dependencies/linux/arkhelper
-          chmod +x lrb/dependencies/linux/dtab
-          chmod +x lrb/dependencies/linux/dtacheck
-          chmod +x lrb/dependencies/linux/superfreq
-          chmod +x lrb/dependencies/linux/swap_art_bytes
-          lrb/dependencies/python/configure_build.py xbox
-          lrb/dependencies/linux/ninja
+          cd lrb/
+          chmod +x dependencies/python/configure_build.py
+          chmod +x dependencies/python/gen_version.py
+          chmod +x dependencies/python/png_list.py
+          chmod +x dependencies/linux/ninja
+          chmod +x dependencies/linux/arkhelper
+          chmod +x dependencies/linux/dtab
+          chmod +x dependencies/linux/dtacheck
+          chmod +x dependencies/linux/superfreq
+          chmod +x dependencies/linux/swap_art_bytes
+          dependencies/python/configure_build.py xbox
+          dependencies/linux/ninja
       - name: Remove .gitkeep
         run: |
           find . -name ".gitkeep" -type f -delete
@@ -89,7 +92,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: LRB-Patch-Xbox
-          path: lrb/_build/xbox
+          path: out/xbox
 
   lrb_ps3:
     runs-on: windows-2019
@@ -98,21 +101,22 @@ jobs:
       - uses: GuillaumeFalourd/command-output-file-action@v1.1
         with:
           command_line: echo InstallDirectory = BLUS30050
-          output_file_name: lrb/ps3_package.conf
+          output_file_name: ps3_package.conf
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Build ARK
         run: |
-          python lrb/dependencies/python/configure_build.py ps3
-          lrb/dependencies/windows/ninja.exe
+          cd lrb/
+          python dependencies/python/configure_build.py ps3
+          dependencies/windows/ninja.exe
       - name: Build PKG
         run: |
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP1018-BLUS30382_00-LRBPATCHH"
           $packageversion="1.01"
-          lrb/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) lrb/ps3_package.conf out/ps3
+          dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) ps3_package.conf out/ps3
       - name: Upload result
         uses: actions/upload-artifact@v4
         with:
@@ -129,17 +133,18 @@ jobs:
           python-version: '3.11'
       - name: Build ARK
         run: |
-          chmod +x tbrb/dependencies/python/configure_build.py
-          chmod +x tbrb/dependencies/python/gen_version.py
-          chmod +x tbrb/dependencies/python/png_list.py
-          chmod +x tbrb/dependencies/linux/ninja
-          chmod +x tbrb/dependencies/linux/arkhelper
-          chmod +x tbrb/dependencies/linux/dtab
-          chmod +x tbrb/dependencies/linux/dtacheck
-          chmod +x tbrb/dependencies/linux/superfreq
-          chmod +x tbrb/dependencies/linux/swap_art_bytes
-          tbrb/dependencies/python/configure_build.py xbox
-          tbrb/dependencies/linux/ninja
+          cd tbrb
+          chmod +x dependencies/python/configure_build.py
+          chmod +x dependencies/python/gen_version.py
+          chmod +x dependencies/python/png_list.py
+          chmod +x dependencies/linux/ninja
+          chmod +x dependencies/linux/arkhelper
+          chmod +x dependencies/linux/dtab
+          chmod +x dependencies/linux/dtacheck
+          chmod +x dependencies/linux/superfreq
+          chmod +x dependencies/linux/swap_art_bytes
+          dependencies/python/configure_build.py xbox
+          dependencies/linux/ninja
       - name: Remove .gitkeep
         run: |
           find . -name ".gitkeep" -type f -delete
@@ -147,7 +152,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: TBRB-Patch-Xbox
-          path: tbrb/_build/xbox
+          path: out/xbox
 
   tbrb_ps3:
     runs-on: windows-2019
@@ -156,21 +161,22 @@ jobs:
       - uses: GuillaumeFalourd/command-output-file-action@v1.1
         with:
           command_line: echo InstallDirectory = BLUS30050
-          output_file_name: tbrb/ps3_package.conf
+          output_file_name: ps3_package.conf
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - name: Build ARK
         run: |
-          python tbrb/dependencies/python/configure_build.py ps3
-          tbrb/dependencies/windows/ninja.exe
+          cd tbrb/
+          python dependencies/python/configure_build.py ps3
+          dependencies/windows/ninja.exe
       - name: Build PKG
         run: |
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP0006-BLUS30282_00-TBRBPATCH"
           $packageversion="1.00"
-          tbrb/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) tbrb/ps3_package.conf out/ps3
+          dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) ps3_package.conf out/ps3
       - name: Upload result
         uses: actions/upload-artifact@v4
         with:
@@ -187,17 +193,18 @@ jobs:
           python-version: '3.11'
       - name: Build ARK
         run: |
-          chmod +x gdrb/dependencies/python/configure_build.py
-          chmod +x gdrb/dependencies/python/gen_version.py
-          chmod +x gdrb/dependencies/python/png_list.py
-          chmod +x gdrb/dependencies/linux/ninja
-          chmod +x gdrb/dependencies/linux/arkhelper
-          chmod +x gdrb/dependencies/linux/dtab
-          chmod +x gdrb/dependencies/linux/dtacheck
-          chmod +x gdrb/dependencies/linux/superfreq
-          chmod +x gdrb/dependencies/linux/swap_art_bytes
-          gdrb/dependencies/python/configure_build.py xbox
-          gdrb/dependencies/linux/ninja
+          cd gdrb/
+          chmod +x dependencies/python/configure_build.py
+          chmod +x dependencies/python/gen_version.py
+          chmod +x dependencies/python/png_list.py
+          chmod +x dependencies/linux/ninja
+          chmod +x dependencies/linux/arkhelper
+          chmod +x dependencies/linux/dtab
+          chmod +x dependencies/linux/dtacheck
+          chmod +x dependencies/linux/superfreq
+          chmod +x dependencies/linux/swap_art_bytes
+          dependencies/python/configure_build.py xbox
+          dependencies/linux/ninja
       - name: Remove .gitkeep
         run: |
           find . -name ".gitkeep" -type f -delete
@@ -205,7 +212,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: GDRB-Patch-Xbox
-          path: gdrb/_build/xbox
+          path: out/xbox
 
   gdrb_ps3:
     runs-on: ubuntu-latest
@@ -217,17 +224,18 @@ jobs:
           python-version: '3.11'
       - name: Build ARK
         run: |
-          chmod +x gdrb/dependencies/python/configure_build.py
-          chmod +x gdrb/dependencies/python/gen_version.py
-          chmod +x gdrb/dependencies/python/png_list.py
-          chmod +x gdrb/dependencies/linux/ninja
-          chmod +x gdrb/dependencies/linux/arkhelper
-          chmod +x gdrb/dependencies/linux/dtab
-          chmod +x gdrb/dependencies/linux/dtacheck
-          chmod +x gdrb/dependencies/linux/superfreq
-          chmod +x gdrb/dependencies/linux/swap_art_bytes
-          gdrb/dependencies/python/configure_build.py ps3
-          gdrb/dependencies/linux/ninja
+          cd gdrb/
+          chmod +x dependencies/python/configure_build.py
+          chmod +x dependencies/python/gen_version.py
+          chmod +x dependencies/python/png_list.py
+          chmod +x dependencies/linux/ninja
+          chmod +x dependencies/linux/arkhelper
+          chmod +x dependencies/linux/dtab
+          chmod +x dependencies/linux/dtacheck
+          chmod +x dependencies/linux/superfreq
+          chmod +x dependencies/linux/swap_art_bytes
+          dependencies/python/configure_build.py ps3
+          dependencies/linux/ninja
       - name: Remove .gitkeep
         run: |
           find . -name ".gitkeep" -type f -delete
@@ -235,4 +243,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: GDRB-Patch-PS3
-          path: gdrb/_build/ps3
+          path: out/ps3
