@@ -40,8 +40,8 @@
    (enter_time 0.0)
    (attract_timeout_done FALSE)
    (enter
-      {logo_greenday.tex set_bitmap "dx/custom_textures/main/gdrb_dx.png"}
-      {logo_greenday.mesh set_local_pos_index 2 100}
+      ;{logo_greenday.tex set_bitmap "dx/custom_textures/main/gdrb_dx.png"}
+      ;{logo_greenday.mesh set_local_pos_index 2 100}
       {set
          [attract_timeout_done]
          FALSE}

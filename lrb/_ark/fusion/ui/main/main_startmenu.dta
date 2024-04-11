@@ -55,12 +55,12 @@
          {int
             [alpha_threshold]}})
    (enter
-      {main_LegoLogo.tex set_bitmap "dx/custom_textures/main/lego_dx_rb.png"}
-      {main_rblogo.tex set_bitmap "dx/custom_textures/main/lego_dx_lego.png"}
-      {Main_RockBand_TM_Glow.mesh set_showing FALSE}
-      {Main_RockBand_TM_Glow.mesh set_local_scale 0 0 0}
-      {Main_RockBandLogo.mesh set_local_scale .9 3.5 1}
-      {Main_LegoLogo.mesh set_local_scale 1 4 5}
+      ;{main_LegoLogo.tex set_bitmap "dx/custom_textures/main/lego_dx_rb.png"}
+      ;{main_rblogo.tex set_bitmap "dx/custom_textures/main/lego_dx_lego.png"}
+      ;{Main_RockBand_TM_Glow.mesh set_showing FALSE}
+      ;{Main_RockBand_TM_Glow.mesh set_local_scale 0 0 0}
+      ;{Main_RockBandLogo.mesh set_local_scale .9 3.5 1}
+      ;{Main_LegoLogo.mesh set_local_scale 1 4 5}
       {do
          {meta fade_meta_music -10}
          {set

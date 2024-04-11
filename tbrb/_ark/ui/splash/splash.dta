@@ -40,8 +40,8 @@
    (enter_time 0.0)
    (attract_timeout_done FALSE)
    (enter
-      {logo_beatles.tex set_bitmap "dx/custom_textures/main/beatles_dx.png"}
-      {logo_beatles.mesh set_local_pos_index 2 -20}
+      ;{logo_beatles.tex set_bitmap "dx/custom_textures/main/beatles_dx.png"}
+      ;{logo_beatles.mesh set_local_pos_index 2 -20}
       {set
          [attract_timeout_done]
          FALSE}
