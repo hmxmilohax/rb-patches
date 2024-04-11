@@ -41,7 +41,7 @@ jobs:
       - uses: GuillaumeFalourd/command-output-file-action@v1.1
         with:
           command_line: echo InstallDirectory = BLUS30050
-          output_file_name: ps3_package.conf
+          output_file_name: rb1/ps3_package.conf
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
@@ -102,7 +102,7 @@ jobs:
       - uses: GuillaumeFalourd/command-output-file-action@v1.1
         with:
           command_line: echo InstallDirectory = BLUS30050
-          output_file_name: ps3_package.conf
+          output_file_name: lrb/ps3_package.conf
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
@@ -163,7 +163,7 @@ jobs:
       - uses: GuillaumeFalourd/command-output-file-action@v1.1
         with:
           command_line: echo InstallDirectory = BLUS30050
-          output_file_name: ps3_package.conf
+          output_file_name: tbrb/ps3_package.conf
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
