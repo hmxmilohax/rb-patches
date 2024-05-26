@@ -56,7 +56,7 @@ jobs:
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP1018-BLUS30050_00-RB1PATCHH"
           $packageversion="1.07"
-          rb1/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) rb1/dependencies/ps3_package.conf rb1/out/ps3
+          rb1/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) rb1/dependencies/package.conf rb1/out/ps3
       - name: Upload result
         uses: actions/upload-artifact@v4
         with:
@@ -116,7 +116,7 @@ jobs:
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP1018-BLUS30382_00-LRBPATCHH"
           $packageversion="1.01"
-          lrb/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) lrb/dependencies/ps3_package.conf lrb/out/ps3
+          lrb/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) lrb/dependencies/package.conf lrb/out/ps3
       - name: Upload result
         uses: actions/upload-artifact@v4
         with:
@@ -176,7 +176,7 @@ jobs:
           $sha_short="$(git rev-parse --short HEAD)".ToUpper()
           $content="UP0006-BLUS30282_00-TBRBPATCH"
           $packageversion="1.00"
-          tbrb/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) tbrb/dependencies/ps3_package.conf tbrb/out/ps3
+          tbrb/dependencies/windows/make_package_npdrm_retail.exe --k-licensee 0x00000000000000000000000000000000 --drm-type Local --package-version $packageversion --content-type GameData --content-id ($content + $sha_short) tbrb/dependencies/package.conf tbrb/out/ps3
       - name: Upload result
         uses: actions/upload-artifact@v4
         with:
