@@ -566,7 +566,7 @@
             get_char}
          get_instrument})
    (enable_bre TRUE)
-   (enable_streak FALSE)
+   (enable_streak TRUE)
    (enable_star_power FALSE))
 (community_leaderboards
    (community_screen main_leaderboard_screen)
