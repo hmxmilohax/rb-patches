@@ -5,3 +5,17 @@
 (venue_fps
    (venue_fps 24)
 )
+; Vsync (0: Uncapped FPS, 1: 60FPS)
+(vsync
+   (vsync 1)
+)
+; Instrument slot mapping (Options: kControllerVocals, kControllerGuitar, kControllerDrum)
+(pad_slot
+   (pad_slot kControllerVocals)
+)
+(guitar_slot
+   (guitar_slot kControllerGuitar)
+)
+(drum_slot
+   (drum_slot kControllerDrum)
+)

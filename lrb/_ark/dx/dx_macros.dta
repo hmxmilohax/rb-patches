@@ -7,6 +7,26 @@
             {elem {find $entry venue_fps} 1}
          }
       }
+      {if {== {elem $entry 0} {basename vsync}}
+         {rnd set_sync
+            {elem {find $entry vsync} 1}
+         }
+      }
+      {if {== {elem $entry 0} {basename pad_slot}}
+         {set $dx_pad_slot
+            {elem {find $entry pad_slot} 1}
+         }
+      }
+      {if {== {elem $entry 0} {basename guitar_slot}}
+         {set $dx_guitar_slot
+            {elem {find $entry guitar_slot} 1}
+         }
+      }
+      {if {== {elem $entry 0} {basename drum_slot}}
+         {set $dx_drum_slot
+            {elem {find $entry drum_slot} 1}
+         }
+      }
    }
 )
 

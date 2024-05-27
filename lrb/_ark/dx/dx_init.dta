@@ -1,2 +1,10 @@
+; instrumment mapping fallbacks in case the config is outdated or broken
+{set $dx_pad_slot kControllerVocals}
+{set $dx_guitar_slot kControllerGuitar}
+{set $dx_drum_slot kControllerDrum}
+
+{rnd set_sync 1}
+
 {set $emulatefps 24}
 #ifndef _SHIP {tour toggle_all_unlock} #endif
+#ifdef _SHIP INIT_DTA_READER #endif
