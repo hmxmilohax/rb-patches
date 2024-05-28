@@ -23,6 +23,8 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 	- Black Background
 	- Performance Mode
 	- Autoplay (disables saving, online)
+	- Vsync
+	- Instrument Slots
 - Vocal practice mode
 - Video Overscan enabled by default on RPCS3
 
@@ -37,7 +39,10 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 
 ### LRB:
 
-- Adjustable venue FPS via external `config.dta` file
+- Adjustable options via external `config.dta` file:
+	- Venue FPS
+	- Vsync
+	- Instrument Slots
 - Songs of any rating can be played
 - UGC songs can be played (RBN, customs)
 - Any region DLC can be loaded
