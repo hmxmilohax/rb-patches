@@ -55,6 +55,7 @@
          {int
             [alpha_threshold]}})
    (enter
+      {profile_mgr set_overscan TRUE}
       ;{main_LegoLogo.tex set_bitmap "dx/custom_textures/main/lego_dx_rb.png"}
       ;{main_rblogo.tex set_bitmap "dx/custom_textures/main/lego_dx_lego.png"}
       ;{Main_RockBand_TM_Glow.mesh set_showing FALSE}

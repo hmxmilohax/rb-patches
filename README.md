@@ -15,6 +15,7 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 - 1ms calibration increment
 - Additional practice speeds
 - SELECT button restarts current practice section
+- Video Overscan enabled by default
 
 ### RB1:
 
@@ -26,7 +27,6 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 	- Vsync
 	- Instrument Slots
 - Vocal practice mode
-- Video Overscan enabled by default
 
 ### TBRB:
 
@@ -35,7 +35,6 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 ### GDRB:
 
 - 60FPS venues on RPCS3
-- Video Overscan enabled by default
 
 ### LRB:
 
