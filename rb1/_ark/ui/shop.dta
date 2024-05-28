@@ -44,18 +44,20 @@
       {helpbar set_limit_to_player_num -1}
       {synth stop rockshop_amb.cue})
    (enter
+      DX_FPS_SETUP
       {$this set_ui_showing TRUE}
       {helpbar
          set_limit_to_player_num
          [char_player_num]}
       {synth play rockshop_amb.cue}
-      #ifdef HX_PS3
-      {rnd set_sync 2}
-      #endif)
-   #ifdef HX_PS3
-   (exit
-      {rnd set_sync 1})
-   #endif
+      ;#ifdef HX_PS3
+      ;{rnd set_sync 2}
+      ;#endif
+   )
+   ;#ifdef HX_PS3
+   ;(exit
+   ;   {rnd set_sync 1})
+   ;#endif
    (set_ui_showing
       ($showing)
       {foreach

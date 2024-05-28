@@ -11,6 +11,7 @@
          {fx is_up}
          {fx fade_out}})
    (enter
+      ;DX_FPS_SETUP
       {set
          [zoomed]
          FALSE}
@@ -27,16 +28,18 @@
       {set
          [playing_town_loop]
          FALSE}
-      #ifdef HX_PS3
-      {rnd set_sync 2}
-      #endif)
+      ;#ifdef HX_PS3
+      ;{rnd set_sync 2}
+      ;#endif
+   )
    (exit
       {synth stop bwt_spaceamb.cue}
       {synth stop bwt_cityamb.cue}
       {fx fade_out}
-      #ifdef HX_PS3
-      {rnd set_sync 1}
-      #endif)
+      ;#ifdef HX_PS3
+      ;{rnd set_sync 1}
+      ;#endif
+   )
    (play_town_loop
       ($play)
       {if_else
