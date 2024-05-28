@@ -9,7 +9,6 @@
    (movie_done
       {ui goto_screen intro_to_splash_screen})
    (enter
-      #ifdef HX_PS3 {profile_mgr set_overscan TRUE} #endif
       {platform_mgr disable_xmp}
       {ui goto_screen splash_screen}
       kDataUnhandled)
@@ -120,6 +119,7 @@
    (enter_time 0.0)
    (attract_timeout_done FALSE)
    (enter
+      {profile_mgr set_overscan TRUE}
       ;{logo.tex set_bitmap "dx/custom_textures/main/logo_dx.png"}
 
       ;{logo.mesh set_local_scale_index 0 {* {logo.mesh get_local_scale_index 0} 0.85}}

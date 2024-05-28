@@ -26,7 +26,7 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 	- Vsync
 	- Instrument Slots
 - Vocal practice mode
-- Video Overscan enabled by default on RPCS3
+- Video Overscan enabled by default
 
 ### TBRB:
 
