@@ -1,3 +1,5 @@
+#include ../dx/dx_init.dta
+
 #ifdef UI_INIT_DTA
 #else
 #define UI_INIT_DTA
@@ -31,8 +33,6 @@
 #include options/options_vocal.dta
 #include options/options_console.dta
 #include options/options_global.dta
-#include ../dx/dx_init.dta
-
 #include options/manage_data.dta
 #include practice/training.dta
 #include saveload.dta
