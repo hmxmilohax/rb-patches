@@ -110,7 +110,7 @@ match sys.platform:
 #specify output directories per platform
 match args.platform:
     case "ps3":
-        out_dir = Path("out", args.platform, "USRDIR", "gen")
+        out_dir = Path("out", args.platform, "PS3_GAME", "USRDIR", "gen")
     case "xbox":
         out_dir = Path("out", args.platform, "gen")
     case "wii":
@@ -140,8 +140,8 @@ if args.platform == "wii" or patchcreator == True:
             hdr_path = "platform/" + args.platform + "/GEN/" + hdr_name.upper() + ".HDR"
             exec_path = "platform/" + args.platform + "/" + elf_name
         case "ps3":
-            hdr_path = "platform/" + args.platform + "/USRDIR/gen/" + hdr_name + ".hdr"
-            exec_path = "platform/" + args.platform + "/USRDIR/" + bin_name
+            hdr_path = "platform/" + args.platform + "/PS3_GAME/USRDIR/gen/" + hdr_name + ".hdr"
+            exec_path = "platform/" + args.platform + "/PS3_GAME/USRDIR/" + bin_name
         case "xbox":
             hdr_path = "platform/" + args.platform + "/gen/" + hdr_name + ".hdr"
             exec_path = "platform/" + args.platform + "/" + xex_name
@@ -301,8 +301,8 @@ if patchcreator == True:
     ark_part = new_ark_part
 match args.platform:
     case "ps3":
-        hdr = str(Path("out", args.platform, "USRDIR", hdr_name + ".hdr"))
-        ark = str(Path("out", args.platform, "USRDIR", hdr_name + "_" + ark_part + ".ark"))
+        hdr = str(Path("out", args.platform, "PS3_GAME", "USRDIR", hdr_name + ".hdr"))
+        ark = str(Path("out", args.platform, "PS3_GAME", "USRDIR", hdr_name + "_" + ark_part + ".ark"))
     case "xbox":
         hdr = str(Path("out", args.platform, hdr_name + ".hdr"))
         ark = str(Path("out", args.platform, hdr_name + "_" + ark_part + ".ark"))

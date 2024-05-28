@@ -1,0 +1,15 @@
+;ps3 hardware detection
+#ifdef HX_PS3
+{if {file_exists "GD:/dev_hdd0/game/NPIA00025/USRDIR/EBOOT.BIN"} ; used for hw detection, NPIA00025 is the playstation store
+   {set $dx_ps3hw TRUE}
+}
+{unless $dx_ps3hw
+   {if {file_exists "GD:/dev_hdd0/game/BLES80608/USRDIR/COLOR.INI"} ; ps3 hw detection fallback, BLES80608 is multiman
+      {set $dx_ps3hw TRUE}
+   }
+}
+#endif
+
+;#ifdef HX_PS3 {unless $dx_ps3hw {rnd set_sync 0}} #endif
+
+;{if {file_exists #ifdef HX_XBOX "GAME:/config.dta" #endif #ifdef HX_PS3 "GD:/dev_hdd0/game/BLUS30382/USRDIR/gdrb_config.dta" #endif} INIT_DTA_READER}
