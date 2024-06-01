@@ -27,6 +27,7 @@ Small patches to vanilla RB games that add small quality-of-life improvements
 	- Vsync
 	- Instrument Slots
 - Vocal practice mode
+- Allow one player in Band Quickplay and Band World Tour
 
 ### TBRB:
 
