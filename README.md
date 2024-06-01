@@ -2,7 +2,26 @@
  
 Lightweight patches to vanilla RB games that add small quality-of-life improvements
 
-**NOTE: The "strum limit" is left *intact* on all of these on XBOX ONLY**
+**NOTE: The "strum limit" is left *intact* on all of these on XBOX ONLY. The PS3 versions do not have strum limits**
+
+</br>
+
+# 📥 Downloads
+
+| Xbox 360 | PlayStation 3 |
+| --- | ----------- |
+| 📥 [RB1 Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/RB1-Patch-Xbox.zip) | 📥 [RB1 Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/RB1-Patch-PS3.zip) *RPCS3 only! |
+| 📥 [TBRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/TBRB-Patch-Xbox.zip) | 📥 [TBRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/TBRB-Patch-PS3.zip) 📥 [PS3 Disc Patch (Required)](https://github.com/hmxmilohax/rb-patches/raw/main/tbrb/dependencies/TBRB-PS3DiscPatch.zip)* |
+| 📥 [GDRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/GDRB-Patch-Xbox.zip) | 📥 [GDRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/GDRB-Patch-PS3.zip)** |
+| 📥 [LRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/LRB-Patch-Xbox.zip) | 📥 [LRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/LRB-Patch-PS3.zip) |
+
+</br>
+
+> These install exactly the same as the *Deluxe* mods, as usual make sure you back up each game's `default.xex`
+>
+> *Due to technical reasons, TBRB on PS3 requires a separate "Disc Patch", extract that and overwrite the files where your base game is installed
+>
+> **For GDRB on PS3, extract and overwrite the files where your base game is installed 
 
 </br>
 
@@ -52,16 +71,3 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 - Holiday DLC minifigures
 - Vocal practice mode
 - Compatible with the PS3 EU 1.0 debug build via patchcreator
-
-</br>
-
-# 📥 Downloads
-
-### 📥 [RB1 Patch (Xbox)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/RB1-Patch-Xbox.zip) 📥 [RB1 Patch (PS3)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/RB1-Patch-PS3.zip) *RPCS3 only!
-### 📥 [TBRB Patch (Xbox)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/TBRB-Patch-Xbox.zip) (ps3 coming soon)
-### 📥 [GDRB Patch (Xbox)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/GDRB-Patch-Xbox.zip) 📥 [GDRB Patch (PS3)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/GDRB-Patch-PS3.zip)
-### 📥 [LRB Patch (Xbox)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/LRB-Patch-Xbox.zip) 📥 [LRB Patch (PS3)](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/LRB-Patch-PS3.zip)
-
-</br>
-
-> These install exactly the same as the *Deluxe* mods, as usual make sure you back up each game's `default.xex`
