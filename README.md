@@ -16,6 +16,7 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 - Additional practice speeds
 - SELECT button restarts current practice section
 - Video Overscan enabled by default
+- Default difficulty is Expert
 
 ### RB1:
 
@@ -28,7 +29,6 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 	- Instrument Slots
 - Vocal practice mode
 - Allow one player in Band Quickplay and Band World Tour
-- Default difficulty is Expert
 
 ### TBRB:
 
