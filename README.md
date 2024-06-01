@@ -1,6 +1,6 @@
 # rb-patches
  
-Small patches to vanilla RB games that add small quality-of-life improvements
+Lightweight patches to vanilla RB games that add small quality-of-life improvements
 
 **NOTE: The "strum limit" is left *intact* on all of these on XBOX ONLY**
 
