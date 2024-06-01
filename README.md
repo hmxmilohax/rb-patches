@@ -28,6 +28,7 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 	- Instrument Slots
 - Vocal practice mode
 - Allow one player in Band Quickplay and Band World Tour
+- Default difficulty is Expert
 
 ### TBRB:
 
