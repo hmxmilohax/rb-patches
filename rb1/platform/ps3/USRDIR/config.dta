@@ -3,7 +3,7 @@
 
 ; Venue FPS - Default: 24, can go up to 60
 (venue_fps
-   (venue_fps 60)
+   (venue_fps 24)
 )
 ; Black Background - Completely black background in-game
 (black_background
