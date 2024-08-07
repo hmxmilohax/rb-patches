@@ -10,6 +10,6 @@
 }
 #endif
 
-;#ifdef HX_PS3 {unless $dx_ps3hw {rnd set_sync 0}} #endif
+#ifdef HX_PS3 {unless $dx_ps3hw {rnd set_sync 0}} #endif
 
 ;{if {file_exists #ifdef HX_XBOX "GAME:/config.dta" #endif #ifdef HX_PS3 "GD:/dev_hdd0/game/BLUS30382/USRDIR/tbrb_config.dta" #endif} INIT_DTA_READER}

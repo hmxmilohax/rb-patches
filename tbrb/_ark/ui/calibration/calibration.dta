@@ -23,9 +23,11 @@
    (parent
       {ui current_screen})
    (enter
+      #ifdef HX_PS3 {unless $dx_ps3hw {rnd set_sync 1}} #endif
       {meta music_stop}
       {platform_mgr disable_xmp})
    (exit
+      #ifdef HX_PS3 {unless $dx_ps3hw {rnd set_sync 0}} #endif
       {meta music_start}
       {platform_mgr enable_xmp}
       {input_mgr set_user ''})

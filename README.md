@@ -75,11 +75,11 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 
 ### TBRB:
 
-- 60FPS venues on RPCS3 and Xbox 360
+- Vsync disabled on RPCS3
 
 ### GDRB:
 
-- 60FPS venues on RPCS3
+- Vsync disabled on RPCS3
 
 ### LRB:
 
