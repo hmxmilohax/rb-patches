@@ -419,7 +419,6 @@
    (enter
       ;venue fps setup
       #ifdef _SHIP
-      INIT_DTA_READER
       DX_FPS_SETUP
       #endif
       {if

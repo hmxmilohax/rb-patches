@@ -3,7 +3,7 @@
 
 ; Venue FPS (Default: 24, can go up to 60)
 (venue_fps
-   (venue_fps 60)
+   (venue_fps 24)
 )
 ; Vsync (0: Uncapped FPS, 1: 60FPS)
 (vsync

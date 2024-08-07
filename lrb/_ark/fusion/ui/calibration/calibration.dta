@@ -23,9 +23,11 @@
    (parent
       {ui current_screen})
    (enter
+      {rnd set_sync 1}
       {meta music_stop}
       {platform_mgr disable_xmp})
    (exit
+      {rnd set_sync $set_sync}
       {meta music_start}
       {platform_mgr enable_xmp}
       {input_mgr set_user ''})

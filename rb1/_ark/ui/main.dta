@@ -9,9 +9,11 @@
    (movie_done
       {ui goto_screen intro_to_splash_screen})
    (enter
+      {rnd set_sync 1}
       {platform_mgr disable_xmp}
       {ui goto_screen splash_screen}
       kDataUnhandled)
+   (exit {rnd set_sync $set_sync})
    (BUTTON_DOWN_MSG
       {if
          {'||'
@@ -951,6 +953,8 @@
    (videos attract)
    (movie_done
       {ui goto_screen splash_screen})
+   (enter {rnd set_sync 1})
+   (exit {rnd set_sync $set_sync})
    (BUTTON_DOWN_MSG
       {if
          {'||'

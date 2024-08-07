@@ -22,11 +22,13 @@
             {elem {find $entry autoplay} 1}
          }
       }
+      #ifdef HX_PS3
       {if {== {elem $entry 0} {basename vsync}}
-         {rnd set_sync
+         {set $dx_vsync
             {elem {find $entry vsync} 1}
          }
       }
+      #endif
       {if {== {elem $entry 0} {basename pad_slot}}
          {set $dx_pad_slot
             {elem {find $entry pad_slot} 1}

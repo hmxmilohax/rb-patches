@@ -3,8 +3,10 @@
 {set $dx_guitar_slot kControllerGuitar}
 {set $dx_drum_slot kControllerDrum}
 
-{rnd set_sync 1}
-
 {set $emulatefps 24}
 
+{set $dx_vsync TRUE}
+
 INIT_DTA_READER
+
+{rnd set_sync $set_sync}

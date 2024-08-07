@@ -1437,6 +1437,7 @@
                (back select)}
             {syncoff.grp set_showing FALSE})})
    (enter
+      {rnd set_sync 1}
       {set
          [cycle_time_ms]
          755}
@@ -1454,6 +1455,7 @@
          set_limit_to_player_num
          {calibrate_video_offset_screen get player_num}})
    (exit
+      {rnd set_sync $set_sync}
       {if
          [running]
          {$this stop_audio}}

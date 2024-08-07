@@ -996,6 +996,8 @@
    LIMIT_TO_LEADER_SESSION
    (movie_done
       {ui goto_screen tour_solo_text_credits_screen})
+   (enter {rnd set_sync 1})
+   (exit {rnd set_sync $set_sync})
    (BUTTON_DOWN_MSG
       {if
          {'||'
