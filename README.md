@@ -25,6 +25,30 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 
 </br>
 
+# 📥 RPCS3 Recommended Settings
+
+| Recommended | Minimum |
+| --- | ----------- |
+| 📥 [All Games](https://github.com/hmxmilohax/rb-patches/raw/main/_custom_configs/recommended_all.zip) | 📥 [All Games](https://github.com/hmxmilohax/rb-patches/raw/main/_custom_configs/minimum_all.zip) |
+| 📥 [RB1](https://github.com/hmxmilohax/rb-patches/raw/main/_custom_configs/recommended_rb1.zip) | 📥 [RB1](https://github.com/hmxmilohax/rb-patches/raw/main/_custom_configs/minimum_rb1.zip) |
+| 📥 [TBRB](https://github.com/hmxmilohax/rb-patches/raw/main/_custom_configs/recommended_tbrb.zip) | 📥 [TBRB](https://github.com/hmxmilohax/rb-patches/raw/main/_custom_configs/minimum_tbrb.zip) |
+| 📥 [GDRB](https://github.com/hmxmilohax/rb-patches/raw/main/_custom_configs/recommended_gdrb.zip) | 📥 [GDRB](https://github.com/hmxmilohax/rb-patches/raw/main/_custom_configs/minimum_gdrb.zip) |
+| 📥 [LRB](https://github.com/hmxmilohax/rb-patches/raw/main/_custom_configs/recommended_lrb.zip) | 📥 [LRB](https://github.com/hmxmilohax/rb-patches/raw/main/_custom_configs/minimum_lrb.zip) |
+
+</br>
+
+> To use these, click on the settings you want to download then extract the ZIP archives in the folder where you extracted RPCS3. It should combine folders automatically if you did it right.
+>
+> "All Games" includes custom configurations for every game listed here.
+>
+> In the GIF example below, the “Recommended” requirements settings archive (recommended.zip) was downloaded and its contents were moved into RPCS3’s folder.
+
+</br>
+
+![image](https://raw.githubusercontent.com/hmxmilohax/rb3-pc/main/assets/images/cust/quickconf.gif)
+
+</br>
+
 ## Patches Applied:
 
 ### All:
