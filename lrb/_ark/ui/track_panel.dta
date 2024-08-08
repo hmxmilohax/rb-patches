@@ -7,7 +7,13 @@
       {game add_sink $this}
       {$this
          set_showing
-         {gamemode get show_track}})
+         {if_else
+            {'||'
+               $skip_intro
+               {gamemode get is_drum_trainer}
+               {gamemode get is_practice}}
+            {gamemode get show_track}
+            FALSE}})
    (exit
       {game remove_sink $this})
    (unison_hit)
@@ -46,8 +52,6 @@
       {{$this loaded_dir}
          reset})
    (on_extend
-      {world_panel set_showing {! $dx_black_background}}
-      {handle ({get_track_panel} set_showing {! $dx_performance_mode})}
       {$this play_intro}
       {if
          {&&
@@ -61,22 +65,19 @@
    TRACK_PANEL_HANDLERS}
 {new
    TrackPanel
-   hth_track_panel
+   h2h_track_panel
    (file
       {if_else
          {==
             {{game get_participant_config 0}
                get_track_sym}
             vocals}
-         ../track/trackpanel_hth_vocals.milo
-         ../track/trackpanel_hth.milo})
+         ../track/trackpanel_h2h_vocals.milo
+         ../track/trackpanel_h2h.milo})
    TRACK_PANEL_HANDLERS}
 {func
    get_track_panel
    {gamemode get track_panel}}
 {set
    $playback_file
-   ""}
-{set
-   $fonixout_file
    ""}

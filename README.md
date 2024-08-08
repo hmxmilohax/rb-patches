@@ -64,6 +64,8 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 ### RB1:
 
 - Adjustable options via external `config.dta` file:
+	- Track Speed
+	- Sync Difficulty Speeds
 	- Venue FPS
 	- Black Background
 	- Performance Mode
@@ -86,6 +88,8 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 ### LRB:
 
 - Adjustable options via external `config.dta` file:
+	- Track Speed
+	- Sync Difficulty Speeds
 	- Venue FPS
 	- Vsync
 	- Instrument Slots

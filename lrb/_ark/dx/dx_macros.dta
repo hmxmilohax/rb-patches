@@ -2,6 +2,16 @@
 (
    {set $dxsettings {read_file #ifdef HX_XBOX "GAME:/config.dta" #endif #ifdef HX_PS3 "GD:/dev_hdd0/game/BLUS30382/USRDIR/config.dta" #endif}}
    {foreach $entry $dxsettings
+      {if {== {elem $entry 0} {basename track_speed}}
+         {set $trackspeed
+            {elem {find $entry track_speed} 1}
+         }
+      }
+      {if {== {elem $entry 0} {basename sync_diff_speeds}}
+         {set $dx_sync_diff_speeds
+            {elem {find $entry sync_diff_speeds} 1}
+         }
+      }
       {if {== {elem $entry 0} {basename venue_fps}}
          {set $emulatefps
             {elem {find $entry venue_fps} 1}

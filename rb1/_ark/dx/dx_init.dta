@@ -7,6 +7,8 @@
 
 {set $dx_vsync TRUE}
 
+{set $trackspeed 1.0}
+
 INIT_DTA_READER
 
 {rnd set_sync $set_sync}

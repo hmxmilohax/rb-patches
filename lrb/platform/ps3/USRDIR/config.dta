@@ -1,11 +1,19 @@
 ; --   THIS CONFIGURATION FILE IS REQUIRED TO BE PRESENT    --
-; -- OR ELSE THE GAME WILL CRASH WHEN TRYING TO LOAD A SONG --
+; --         OR ELSE THE GAME WILL CRASH ON BOOT!           --
 
+; Track Speed (1.0: 100%, 1.5: 150%, do not use with BNS in-game)
+(track_speed
+   (track_speed 1.0)
+)
+; Sync Difficulty Speeds - All tracks run at Expert speed
+(sync_diff_speeds
+   (sync_diff_speeds 0)
+)
 ; Venue FPS (Default: 24, can go up to 60)
 (venue_fps
    (venue_fps 24)
 )
-; Vsync (0: Uncapped FPS, 1: 60FPS)
+; Vsync (0: Uncapped FPS, 1: 60FPS, only set to 0 on RPCS3!)
 (vsync
    (vsync 1)
 )

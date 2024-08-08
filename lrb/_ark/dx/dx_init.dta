@@ -7,6 +7,8 @@
 
 {set $dx_vsync TRUE}
 
+{set $trackspeed 1.0}
+
 #ifndef _SHIP {tour toggle_all_unlock} #endif
 #ifdef _SHIP INIT_DTA_READER #endif
 

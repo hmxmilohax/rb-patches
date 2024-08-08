@@ -1,0 +1,1 @@
+taskkill /IM rpcs3.exe /F
