@@ -76,10 +76,12 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 ### TBRB:
 
 - Vsync disabled on RPCS3
+- "Super Speed" (Breakneck Speed) in Practice mode
 
 ### GDRB:
 
 - Vsync disabled on RPCS3
+- "Super Speed" (Breakneck Speed) in Practice mode
 
 ### LRB:
 
