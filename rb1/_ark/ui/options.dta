@@ -1455,7 +1455,7 @@
          set_limit_to_player_num
          {calibrate_video_offset_screen get player_num}})
    (exit
-      {rnd set_sync $set_sync}
+      {rnd set_sync $dx_vsync}
       {if
          [running]
          {$this stop_audio}}

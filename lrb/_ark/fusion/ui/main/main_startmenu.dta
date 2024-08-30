@@ -244,7 +244,7 @@
    (enter
       {rnd set_sync 1})
    (exit
-      {rnd set_sync $set_sync})
+      {rnd set_sync $dx_vsync})
    (poll
       {if
          {TexMovie.tmov get played}

@@ -2206,7 +2206,7 @@
    (movie_done
       {ui goto_screen tour_band_text_credits_screen})
    (enter {rnd set_sync 1})
-   (exit {rnd set_sync $set_sync})
+   (exit {rnd set_sync $dx_vsync})
    LIMIT_TO_SESSION_LEADER
    (BUTTON_DOWN_MSG
       {if

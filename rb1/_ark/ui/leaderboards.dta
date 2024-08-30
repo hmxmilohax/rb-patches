@@ -594,7 +594,7 @@
    (movie_done
       {ui goto_screen community_specialfeatures_screen})
    (enter {rnd set_sync 1})
-   (exit {rnd set_sync $set_sync})
+   (exit {rnd set_sync $dx_vsync})
    (BUTTON_DOWN_MSG
       {if
          {'||'
@@ -618,7 +618,7 @@
    (movie_done
       {ui goto_screen credits_screen})
    (enter {rnd set_sync 1})
-   (exit {rnd set_sync $set_sync})
+   (exit {rnd set_sync $dx_vsync})
    (BUTTON_DOWN_MSG
       {if
          {'||'

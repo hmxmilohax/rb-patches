@@ -27,7 +27,7 @@
       {meta music_stop}
       {platform_mgr disable_xmp})
    (exit
-      {rnd set_sync $set_sync}
+      {rnd set_sync $dx_vsync}
       {meta music_start}
       {platform_mgr enable_xmp}
       {input_mgr set_user ''})
