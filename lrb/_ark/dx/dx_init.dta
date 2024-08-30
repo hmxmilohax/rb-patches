@@ -12,4 +12,4 @@
 #ifndef _SHIP {tour toggle_all_unlock} #endif
 #ifdef _SHIP INIT_DTA_READER #endif
 
-{rnd set_sync $set_sync}
+{rnd set_sync $dx_vsync}

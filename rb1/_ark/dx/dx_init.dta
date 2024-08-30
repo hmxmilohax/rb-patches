@@ -11,4 +11,4 @@
 
 INIT_DTA_READER
 
-{rnd set_sync $set_sync}
+{rnd set_sync $dx_vsync}
