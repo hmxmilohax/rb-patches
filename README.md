@@ -84,6 +84,7 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 
 - Vsync disabled on RPCS3
 - "Super Speed" (Breakneck Speed) in Practice mode and Drum Trainer
+- DIY stems for "Chump" and "Longview" re-done with modern technology [by dirk](https://github.com/dirkNlerxst/dirks-rb3-customs/tree/main/MOGG%20Replacements)
 
 ### LRB:
 
