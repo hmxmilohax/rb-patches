@@ -10,7 +10,7 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 
 | Xbox 360 | PlayStation 3 |
 | --- | ----------- |
-| 📥 [RB1 Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/RB1-Patch-Xbox.zip) | 📥 [RB1 Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/RB1-Patch-PS3.zip) *RPCS3 only! |
+| 📥 [RB1 Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/RB1-Patch-Xbox.zip) | 📥 [RB1 Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/RB1-Patch-PS3.zip)  |
 | 📥 [TBRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/TBRB-Patch-Xbox.zip) | 📥 [TBRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/TBRB-Patch-PS3.zip) 📥 [PS3 Disc Patch (Required)](https://github.com/hmxmilohax/rb-patches/raw/main/tbrb/dependencies/TBRB-PS3DiscPatch.zip)* |
 | 📥 [GDRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/GDRB-Patch-Xbox.zip) | 📥 [GDRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/GDRB-Patch-PS3.zip)** |
 | 📥 [LRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/LRB-Patch-Xbox.zip) | 📥 [LRB Patch](https://nightly.link/hmxmilohax/rb-patches/workflows/build/main/LRB-Patch-PS3.zip) |
