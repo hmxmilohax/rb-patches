@@ -9,9 +9,9 @@
 (sync_diff_speeds
    (sync_diff_speeds 0)
 )
-; Venue FPS (Default: 24, can go up to 60)
+; Venue FPS (Vanilla: 24, can go up to 60)
 (venue_fps
-   (venue_fps 24)
+   (venue_fps 30)
 )
 ; Instrument slot mapping (Options: kControllerVocals, kControllerGuitar, kControllerDrum)
 (pad_slot
