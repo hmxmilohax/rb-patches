@@ -56,6 +56,7 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 - Faster boot time
 - Faster scrolling
 - 1ms calibration increment
+- Volume sliders can be muted completely
 - Additional practice speeds
 - SELECT button restarts current practice section
 - Video Overscan enabled by default
