@@ -10,7 +10,6 @@
       {ui goto_screen splash_screen})
    (enter
       #ifdef HX_PS3 {unless $dx_ps3hw {rnd set_sync 1}} #endif
-      {ui goto_screen splash_screen}
       kDataUnhandled)
    (exit
       #ifdef HX_PS3 {unless $dx_ps3hw {rnd set_sync 0}} #endif

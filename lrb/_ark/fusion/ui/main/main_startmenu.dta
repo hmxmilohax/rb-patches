@@ -55,7 +55,7 @@
          {int
             [alpha_threshold]}})
    (enter
-      {profile_mgr set_overscan TRUE}
+      ;{profile_mgr set_overscan TRUE}
       ;{main_LegoLogo.tex set_bitmap "dx/custom_textures/main/lego_dx_rb.png"}
       ;{main_rblogo.tex set_bitmap "dx/custom_textures/main/lego_dx_lego.png"}
       ;{Main_RockBand_TM_Glow.mesh set_showing FALSE}
@@ -414,9 +414,12 @@
    (file
       "../splash/startup_mtv_panel.milo")
    (enter
+      {profile_mgr set_overscan TRUE}
       {$this set_showing FALSE}
       {taskmgr clear_tasks}
-         {ui goto_screen main_startscreen})
+      {ui goto_screen attract_screen}
+      {ui goto_screen main_startscreen}
+   )
    (move_on
       {taskmgr clear_tasks}
       {ui goto_screen splash_harmonix_screen})

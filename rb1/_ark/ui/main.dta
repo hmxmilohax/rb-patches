@@ -11,7 +11,6 @@
    (enter
       {rnd set_sync 1}
       {platform_mgr disable_xmp}
-      {ui goto_screen splash_screen}
       kDataUnhandled)
    (exit {rnd set_sync $dx_vsync})
    (BUTTON_DOWN_MSG
