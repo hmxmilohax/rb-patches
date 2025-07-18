@@ -9,6 +9,7 @@
    (movie_done
       {ui goto_screen intro_to_splash_screen})
    (enter
+      {profile_mgr set_overscan TRUE}
       {rnd set_sync 1}
       {platform_mgr disable_xmp}
       kDataUnhandled)
@@ -120,7 +121,6 @@
    (enter_time 0.0)
    (attract_timeout_done FALSE)
    (enter
-      {profile_mgr set_overscan TRUE}
       ;{logo.tex set_bitmap "dx/custom_textures/main/logo_dx.png"}
 
       ;{logo.mesh set_local_scale_index 0 {* {logo.mesh get_local_scale_index 0} 0.85}}

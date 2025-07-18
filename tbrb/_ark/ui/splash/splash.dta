@@ -9,6 +9,7 @@
    (movie_done
       {ui goto_screen splash_screen})
    (enter
+      {profile_mgr set_overscan TRUE}
       #ifdef HX_PS3 {unless $dx_ps3hw {rnd set_sync 1}} #endif
       kDataUnhandled)
    (exit
@@ -41,7 +42,6 @@
    (enter_time 0.0)
    (attract_timeout_done FALSE)
    (enter
-      {profile_mgr set_overscan TRUE}
       ;{logo_beatles.tex set_bitmap "dx/custom_textures/main/beatles_dx.png"}
       ;{logo_beatles.mesh set_local_pos_index 2 -20}
       {set

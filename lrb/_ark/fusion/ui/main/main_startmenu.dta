@@ -242,6 +242,7 @@
          {synth play button_select}
          {$this move_on}})
    (enter
+      {profile_mgr set_overscan TRUE}
       {rnd set_sync 1})
    (exit
       {rnd set_sync $dx_vsync})
@@ -412,13 +413,10 @@
    UIPanel
    splash_mtv_panel
    (file
-      "../splash/startup_mtv_panel.milo")
+      "../splash/startup_TT_panel.milo")  ; dx - use tt fusion, just cuz :)
    (enter
-      {profile_mgr set_overscan TRUE}
-      {$this set_showing FALSE}
       {taskmgr clear_tasks}
       {ui goto_screen attract_screen}
-      {ui goto_screen main_startscreen}
    )
    (move_on
       {taskmgr clear_tasks}
