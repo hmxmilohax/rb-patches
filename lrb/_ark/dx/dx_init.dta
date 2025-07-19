@@ -3,9 +3,9 @@
 {set $dx_guitar_slot kControllerGuitar}
 {set $dx_drum_slot kControllerDrum}
 
-{set $emulatefps 30}
+#ifdef _SHIP {set $emulatefps 30} #else {set $emulatefps 60} #endif
 
-{set $dx_vsync TRUE}
+#ifdef _SHIP {set $dx_vsync TRUE} #else {set $dx_vsync FALSE} #endif
 
 {set $trackspeed 1.0}
 
