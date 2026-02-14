@@ -288,6 +288,9 @@
          ($this my_enter)}
       {input_mgr set_limit kLimitSession}
       ;venue fps setup
+      #ifdef HX_XBOX
+      {background_panel iterate PostProc $p {$p set emulate_fps 30}}  ; for some reason when setting the menu fps to 60 it makes the venues 60fps too
+      #endif
       #ifdef HX_PS3
       {unless $dx_ps3hw
          {$world iterate PostProc $p {$p set emulate_fps 60}}
