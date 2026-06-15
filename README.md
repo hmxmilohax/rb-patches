@@ -20,13 +20,15 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 
 > These install exactly the same as the *Deluxe* mods, as usual make sure you back up each game's `default.xex`
 >
-> *Due to technical reasons, TBRB on PS3 requires a separate "Disc Patch", extract that and overwrite the files where your base game is installed
+> *If you already had RB2DX installed on PS3/RPCS3, you need to delete `dev_hdd0/game/BLUS30147/PARAM.SFO` or else it will tell you that you have a newer version installed
 >
-> **For GDRB on PS3, extract and overwrite the files where your base game is installed 
+> **Due to technical reasons, TBRB on PS3 requires a separate "Disc Patch", extract that and overwrite the files where your base game is installed
+>
+> ***For GDRB on PS3, extract and overwrite the files where your base game is installed 
 
-> Please keep in mind this project does not aim to add new features or be "ultimate" or "definitive", but rather to enhance the vanilla experience.
+> Please keep in mind this project does not aim to add new features or be "ultimate" or "definitive", but rather to enhance the vanilla experience
 >
-> If you're looking for a more feature-complete option for RB2, check out [Rock Band 2 Deluxe](https://rb2dx.milohax.org/) instead.
+> If you're looking for a more feature-complete option for RB2, check out [Rock Band 2 Deluxe](https://rb2dx.milohax.org/) instead
 
 </br>
 
