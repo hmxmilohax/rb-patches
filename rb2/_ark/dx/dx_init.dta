@@ -1,0 +1,11 @@
+; fallbacks in case the config is outdated or broken
+{set $dx_pad_slot kControllerVocals}
+{set $dx_guitar_slot kControllerGuitar}
+{set $dx_drum_slot kControllerDrum}
+{set $emulatefps 30}
+{set $dx_vsync TRUE}
+{set $trackspeed 1.0}
+
+INIT_DTA_READER
+
+{rnd set_sync $dx_vsync}

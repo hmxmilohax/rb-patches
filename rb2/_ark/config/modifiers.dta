@@ -1,0 +1,36 @@
+(features
+   modifier_saving_feature
+   modifier_achievements_feature
+   modifier_online_feature
+)
+; dx - all modifiers unlocked
+(modifiers
+   (mod_nofail unlocked)  ; dx - no penalty for using no fail mode
+   (mod_doublespeed
+      (activate {modifier_mgr deactivate_modifier mod_halfspeed})
+      unlocked
+   )
+   (mod_choose_venue (disables (modifier_online_feature)) unlocked)
+   (mod_nohud unlocked)
+   (mod_unlockall  ; dx - allow unlock all online
+      (disables
+         (modifier_saving_feature
+            modifier_achievements_feature
+         )
+      )
+      (activate {profile_mgr unlock_all_songs})
+      (deactivate {profile_mgr relock_songs})
+      unlocked
+   )
+   (mod_newvenuesonly unlocked)
+   (mod_demomode
+      (disables
+         (modifier_saving_feature
+            modifier_achievements_feature
+            modifier_online_feature
+         )
+      )
+      unlocked
+   )
+   (mod_awesome unlocked)
+)

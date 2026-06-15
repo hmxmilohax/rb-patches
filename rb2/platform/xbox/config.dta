@@ -1,0 +1,42 @@
+; --   THIS CONFIGURATION FILE IS REQUIRED TO BE PRESENT    --
+; --         OR ELSE THE GAME WILL CRASH ON BOOT!           --
+
+; Modifiers to enable by default (optional), since they don't save
+(mod_nofail
+   (mod_nofail 0)  ; No Fail Mode
+)
+(mod_doublespeed
+   (mod_doublespeed 0)  ; Breakneck Speed
+)
+(mod_choose_venue
+   (mod_choose_venue 0)  ; Select Venue Screen (disables online play)
+)
+(mod_newvenuesonly
+   (mod_newvenuesonly 0)  ; New Venues Only
+)
+(mod_awesome
+   (mod_awesome 0)  ; Awesomeness Detection
+)
+; Track Speed (1.0: 100%, 1.5: 150%, do not use with BNS in-game)
+; If you want to use 1.5 it is recommended to enable breakneck speed above instead
+(track_speed
+   (track_speed 1.0)
+)
+; Sync Difficulty Speeds - All tracks run at Expert speed
+(sync_diff_speeds
+   (sync_diff_speeds 0)
+)
+; Venue FPS (Vanilla: 24, can go up to 60)
+(venue_fps
+   (venue_fps 30)
+)
+; Instrument slot mapping (Options: kControllerVocals, kControllerGuitar, kControllerDrum)
+(pad_slot
+   (pad_slot kControllerVocals)
+)
+(guitar_slot
+   (guitar_slot kControllerGuitar)
+)
+(drum_slot
+   (drum_slot kControllerDrum)
+)
