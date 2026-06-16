@@ -105,6 +105,30 @@
    (np_communication_id
       "NPWR00856_00")
    (titles
+      (rb2e
+         (title_id
+            (live
+               "ROCKBAND2")
+            (test
+               "NPXX00501"))
+         (service_id
+            (live
+               "UP8802-BLUS30462_00")
+            (test
+               "UP0006-NPXX00501_00"))
+      )
+      (rb3
+         (title_id
+            (live
+               "ROCKBAND3")
+            (test
+               "NPXX00500"))
+         (service_id
+            (live
+               "UP8802-BLUS30463_00")
+            (test
+               "UP0006-NPXX00500_00"))
+      )
       #ifdef _LRB_REGION_EU
       (lrb
          (title_id
