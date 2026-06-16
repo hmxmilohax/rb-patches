@@ -363,7 +363,8 @@
       }
    )
    (enter
-      {$world iterate PostProc $p {unless {== $p "photocopy.pp"} {$p set emulate_fps $emulatefps}}}  ; dx - apply venue fps setting
+      ; dx - apply venue fps setting
+      {$world iterate PostProc $p {unless {== $p "photocopy.pp"} {$p set emulate_fps {if_else {in_video_venue} 60 $emulatefps}}}}  ; use 60fps always on mvs
       {fx set_showing FALSE}
       {set [delayed_mic_check] FALSE}
       {rnd set_in_game TRUE}

@@ -96,8 +96,9 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 	- Venue FPS
 	- Vsync
 	- Instrument Slots
+- Music Video venues are always 60FPS
 - Vocal practice mode
-- Expanded career from [Rock Band 2 Deluxe](https://rb2dx.milohax.org/)
+- Expanded career from [Rock Band 2 Deluxe](https://rb2dx.milohax.org/), and some of its additional venues
 - Leaving mid-gig does not make you lose fans
 - All prefabs available
 - No Fail Mode can be used without penalty
@@ -106,6 +107,7 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 - Menus on PS3 use the full vsync rate everywhere
 - DLC loading doesn't interrupt menu usage
 - Loading tips and other locale from future games
+- Lasers in the Orion Lounge venue a la RB1
 
 ### TBRB:
 
