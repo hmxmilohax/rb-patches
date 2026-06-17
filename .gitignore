@@ -2,6 +2,7 @@
 *.ark
 __pycache__
 _xenia
+*.bak
 
 #funny files that should never be committed
 .DS_Store
@@ -13,3 +14,6 @@ _xenia
 #ninja build dirs
 obj
 out
+
+#my stuff just in case
+arson-fmt.py

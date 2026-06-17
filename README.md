@@ -82,6 +82,7 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 	- Vsync
 	- Instrument Slots
 - Vocal practice mode
+- Multiplier goes up in practice mode
 - Allow one player in Band Quickplay and Band World Tour
 
 ### RB2:

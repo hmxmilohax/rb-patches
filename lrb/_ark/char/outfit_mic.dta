@@ -1,3 +1,4 @@
+; dx - unlock all
 (mic
    (closet TRUE)
    (sort FALSE)
@@ -7,64 +8,82 @@
       (mic
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (mic_01
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (mic_02
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (mic_03
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (mic_04
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (mic_clasic
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (banjomic02
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (star_mic
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (neonmic02
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (freddy_mic
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (carrott_mic
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (dynamite_mic
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (ice_cream_mic
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (eye_mic
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (squid_mic
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))
+         (unlocked TRUE)
+      )
       (skullmic02
          (genre shell_shop_punkstore)
          (cost 0)
-         (unlocked TRUE))))
+         (unlocked TRUE)
+      )
+   )
+)

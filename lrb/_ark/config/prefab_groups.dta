@@ -1,6 +1,21 @@
 (prefab_groups
    (band_members lego_guitar lego_drum lego_vocals lego_bass)
-   (entourage accountant spiritual_guru unpaid_intern manager marketing_executive music_video_director top_promoter Roadie01 Roadie02 Roadie03 top_sound_engineer street_worker stylist record_producer)
+   (entourage
+      accountant
+      spiritual_guru
+      unpaid_intern
+      manager
+      marketing_executive
+      music_video_director
+      top_promoter
+      Roadie01
+      Roadie02
+      Roadie03
+      top_sound_engineer
+      street_worker
+      stylist
+      record_producer
+   )
    (hub_chars
       (Heather_Moonbeam costume_heather_moonbeam)
       (Buzzsaw costume_buzzsaw)
@@ -149,221 +164,230 @@
       (Maharajah costume_maharajah)
       (Redindian costume_redindian)
       (Numbchuck costume_numbchuck)
-      (Robinhood costume_robinhood))
+      (Robinhood costume_robinhood)
+   )
+   ; dx - allow all prefabs in random/selection
    (quickplay
-accountant
-Alien
-Alien_clown
-Alien_commuter
-Alien_construction
-Alien_cow
-Alien_damsel
-Alien_dino
-Alien_diver
-Alien_farmer
-Alien_fireman
-Alien_islander
-Alien_jester
-Alien_monkey
-Alien_pirate_bones
-Alien_pirate_gingerbeard
-Alien_pirate_pegleg
-Alien_pitbabe
-Alien_pitcrew
-Alien_rocker1
-Alien_rocker2
-Alien_rocker3
-Alien_skater
-Alien_snowdweller
-Alien_traindriver
-Alien_villageidiot
-Alien_witch
-Alien_wizard
-Alien_zookeeper
-Arcticfemale
-Arcticmale
-Astronaut
-Blur_Alex
-Blur_Damon
-Blur_Dave
-Blur_Graham
-Buzzsaw
-Chauffeur
-Chef
-Clown_miss_direction
-Clown_mr_trick
-Commuter
-Construction
-Cop
-Cowboy
-Damsel
-David_Bowie
-Dinnersuit
-Dino_Hunter
-Dino_Visitor
-Diver
-Doctor
-Dora_Sullivan
-DressedtoThrill_01
-DressedtoThrill_02
-DressedtoThrill_03
-DressedtoThrill_04
-Earl_Stephens_Jr
-Eskimofemale
-Eskimomale
-Farmer_Billyray
-Farmer_Bobbyjoe
-Farmer_Jimbob
-Fireman
-Foreman
-Fritzi_Kostopoulos
-Ghost_dusty
-Ghost_Shivers
-Grace_Williams
-Halloween_Frankie
-Halloween_Furball
-Halloween_Jacko
-Halloween_Mummy
-Halloween_thecount
-Heather_Moonbeam
-HillBilly
-Hotel_Manager
-Iggy_Pop
-Imperial
-Islandchief
-Islanderfemale
-Islandermale
-Jester
-Jimmy_Hendrix
-King
-Knight
-Lederhosen
-lego_bass
-lego_drum
-lego_guitar
-lego_vocals
-Madscientist
-Maharajah
-manager
-marketing_executive
-Maynard_Winter
-Mayor
-Megan_Scott
-Mekon_Gemini
-Miner_Boulders
-Miner_Dust
-Miner_Gravel
-Miner_Rubble
-Moosejaw_Boudreau
-Mothership_Q
-music_video_director
-Nicky_Overdrive
-Numbchuck
-Nurse
-Ol_Smokey
-OldMan
-OldWoman
-Orc
-Penelope_McQueen
-Penny_Twilight
-Pig_Sick
-Piratefemale_MrsPatches
-Piratemale_bones
-Piratemale_Gingerbeard
-Piratemale_MrPatches
-Piratemale_pegleg
-Pitbabe_Britney
-Pitbabe_Whitney
-Pitcrew_Blue
-Queen
-Queen_Brian
-Queen_Freddie
-Queen_John
-Queen_Roger
-Quentin_Lance
-Racedriver
-Racing_Team_Captain
-Racing_Team_Member
-record_producer
-Redindian
-Roadie01
-Roadie02
-Roadie03
-Robinhood
-Roughneck
-Sailor
-SchoolBoy
-Sharkey
-Sir_Thomas
-Skater_Camo
-Skater_cap
-Skel_warr_Rattles
-Skel_warr_Shakes
-Skeleton
-Skeleton_Cal
-Skeleton_Skull
-Soldier
-Spinaltap_David
-Spinaltap_Derek
-Spinaltap_Nigel
-spiritual_guru
-Storm
-street_worker
-stylist
-The_Duke_of_Gravity
-top_promoter
-top_sound_engineer
-Trainconductor
-TrainDriver
-unpaid_intern
-Viking
-Waiter
-Witch
-Wizard
-Wrapped_up
-Zombie
-Zookeeper
-Zookeeper_Boss
-Zookeeper_Retirement
-#ifdef HX_XBOX
-dlc_santa
-dlc_snowman
-dlc_elf
-#endif)
+      accountant
+      Alien
+      Alien_clown
+      Alien_commuter
+      Alien_construction
+      Alien_cow
+      Alien_damsel
+      Alien_dino
+      Alien_diver
+      Alien_farmer
+      Alien_fireman
+      Alien_islander
+      Alien_jester
+      Alien_monkey
+      Alien_pirate_bones
+      Alien_pirate_gingerbeard
+      Alien_pirate_pegleg
+      Alien_pitbabe
+      Alien_pitcrew
+      Alien_rocker1
+      Alien_rocker2
+      Alien_rocker3
+      Alien_skater
+      Alien_snowdweller
+      Alien_traindriver
+      Alien_villageidiot
+      Alien_witch
+      Alien_wizard
+      Alien_zookeeper
+      Arcticfemale
+      Arcticmale
+      Astronaut
+      Blur_Alex
+      Blur_Damon
+      Blur_Dave
+      Blur_Graham
+      Buzzsaw
+      Chauffeur
+      Chef
+      Clown_miss_direction
+      Clown_mr_trick
+      Commuter
+      Construction
+      Cop
+      Cowboy
+      Damsel
+      David_Bowie
+      Dinnersuit
+      Dino_Hunter
+      Dino_Visitor
+      Diver
+      Doctor
+      Dora_Sullivan
+      DressedtoThrill_01
+      DressedtoThrill_02
+      DressedtoThrill_03
+      DressedtoThrill_04
+      Earl_Stephens_Jr
+      Eskimofemale
+      Eskimomale
+      Farmer_Billyray
+      Farmer_Bobbyjoe
+      Farmer_Jimbob
+      Fireman
+      Foreman
+      Fritzi_Kostopoulos
+      Ghost_dusty
+      Ghost_Shivers
+      Grace_Williams
+      Halloween_Frankie
+      Halloween_Furball
+      Halloween_Jacko
+      Halloween_Mummy
+      Halloween_thecount
+      Heather_Moonbeam
+      HillBilly
+      Hotel_Manager
+      Iggy_Pop
+      Imperial
+      Islandchief
+      Islanderfemale
+      Islandermale
+      Jester
+      Jimmy_Hendrix
+      King
+      Knight
+      Lederhosen
+      lego_bass
+      lego_drum
+      lego_guitar
+      lego_vocals
+      Madscientist
+      Maharajah
+      manager
+      marketing_executive
+      Maynard_Winter
+      Mayor
+      Megan_Scott
+      Mekon_Gemini
+      Miner_Boulders
+      Miner_Dust
+      Miner_Gravel
+      Miner_Rubble
+      Moosejaw_Boudreau
+      Mothership_Q
+      music_video_director
+      Nicky_Overdrive
+      Numbchuck
+      Nurse
+      Ol_Smokey
+      OldMan
+      OldWoman
+      Orc
+      Penelope_McQueen
+      Penny_Twilight
+      Pig_Sick
+      Piratefemale_MrsPatches
+      Piratemale_bones
+      Piratemale_Gingerbeard
+      Piratemale_MrPatches
+      Piratemale_pegleg
+      Pitbabe_Britney
+      Pitbabe_Whitney
+      Pitcrew_Blue
+      Queen
+      Queen_Brian
+      Queen_Freddie
+      Queen_John
+      Queen_Roger
+      Quentin_Lance
+      Racedriver
+      Racing_Team_Captain
+      Racing_Team_Member
+      record_producer
+      Redindian
+      Roadie01
+      Roadie02
+      Roadie03
+      Robinhood
+      Roughneck
+      Sailor
+      SchoolBoy
+      Sharkey
+      Sir_Thomas
+      Skater_Camo
+      Skater_cap
+      Skel_warr_Rattles
+      Skel_warr_Shakes
+      Skeleton
+      Skeleton_Cal
+      Skeleton_Skull
+      Soldier
+      Spinaltap_David
+      Spinaltap_Derek
+      Spinaltap_Nigel
+      spiritual_guru
+      Storm
+      street_worker
+      stylist
+      The_Duke_of_Gravity
+      top_promoter
+      top_sound_engineer
+      Trainconductor
+      TrainDriver
+      unpaid_intern
+      Viking
+      Waiter
+      Witch
+      Wizard
+      Wrapped_up
+      Zombie
+      Zookeeper
+      Zookeeper_Boss
+      Zookeeper_Retirement
+      #ifdef HX_XBOX
+      dlc_santa
+      dlc_snowman
+      dlc_elf
+      #endif
+   )
    (bands
-      (queen
-         (Queen_Brian Queen_Roger Queen_Freddie Queen_John))
-      (spinal_tap
-         (Spinaltap_Nigel Sharkey Spinaltap_David Spinaltap_Derek))
-      (blur
-         (Blur_Graham Blur_Dave Blur_Damon Blur_Alex))
-      (iggy_pop
-         (Ol_Smokey Fritzi_Kostopoulos Iggy_Pop Earl_Stephens_Jr))
-      (david_bowie
-         (Maynard_Winter Moosejaw_Boudreau David_Bowie Megan_Scott))
-      (Jimmy_Hendrix
-         (none none Jimmy_Hendrix none))
-      (old_times_sake
-         (Commuter TrainDriver Trainconductor TrainDriver))
+      (queen (Queen_Brian Queen_Roger Queen_Freddie Queen_John))
+      (spinal_tap (Spinaltap_Nigel Sharkey Spinaltap_David Spinaltap_Derek))
+      (blur (Blur_Graham Blur_Dave Blur_Damon Blur_Alex))
+      (iggy_pop (Ol_Smokey Fritzi_Kostopoulos Iggy_Pop Earl_Stephens_Jr))
+      (david_bowie (Maynard_Winter Moosejaw_Boudreau David_Bowie Megan_Scott))
+      (Jimmy_Hendrix (none none Jimmy_Hendrix none))
+      (old_times_sake (Commuter TrainDriver Trainconductor TrainDriver))
       (lego_city_fundraiser
-         (Construction Construction Construction Construction))
+         (Construction Construction Construction Construction)
+      )
       (builders_birthday
-         (Clown_miss_direction Clown_mr_trick Clown_mr_trick Clown_miss_direction))
-      (monster_mash
-         (Zombie Halloween_Mummy Halloween_Jacko Halloween_Furball))
+         (Clown_miss_direction Clown_mr_trick Clown_mr_trick Clown_miss_direction)
+      )
+      (monster_mash (Zombie Halloween_Mummy Halloween_Jacko Halloween_Furball))
       (dressed_to_thrill
-         (DressedtoThrill_02 DressedtoThrill_04 DressedtoThrill_01 DressedtoThrill_03))
+         (DressedtoThrill_02
+            DressedtoThrill_04
+            DressedtoThrill_01
+            DressedtoThrill_03
+         )
+      )
       (sponsor_ship
-         (Piratemale_Gingerbeard Piratemale_MrPatches Piratemale_pegleg Piratefemale_MrsPatches))
-      (mine_over_matter
-         (Miner_Boulders Miner_Gravel Miner_Rubble Miner_Dust))
-      (pig_sick
-         (Pig_Sick Pig_Sick Pig_Sick Pig_Sick))
+         (Piratemale_Gingerbeard
+            Piratemale_MrPatches
+            Piratemale_pegleg
+            Piratefemale_MrsPatches
+         )
+      )
+      (mine_over_matter (Miner_Boulders Miner_Gravel Miner_Rubble Miner_Dust))
+      (pig_sick (Pig_Sick Pig_Sick Pig_Sick Pig_Sick))
       (zoo_keeper
-         (Zookeeper_Retirement Zookeeper_Retirement Zookeeper_Retirement Zookeeper_Retirement))
-      (chill_out
-         (Eskimofemale Eskimofemale Eskimomale Eskimomale))
-      (alien_idol
-         (Alien Alien Alien Alien))
-      (houston
-         (Astronaut Astronaut Astronaut Astronaut))))
+         (Zookeeper_Retirement
+            Zookeeper_Retirement
+            Zookeeper_Retirement
+            Zookeeper_Retirement
+         )
+      )
+      (chill_out (Eskimofemale Eskimofemale Eskimomale Eskimomale))
+      (alien_idol (Alien Alien Alien Alien))
+      (houston (Astronaut Astronaut Astronaut Astronaut))
+   )
+)

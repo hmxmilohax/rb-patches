@@ -75,6 +75,7 @@
       }
    )
    (enter
+      ; dx - 60fps menu on xbox
       #ifdef HX_XBOX
       {background_panel iterate PostProc $p {$p set emulate_fps 60}}
       #endif

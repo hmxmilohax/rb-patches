@@ -1,6 +1,7 @@
+; dx - no illegal words
 (english)
 (italian)
-(frensh)
+(frensh)  ; ttfusion typo, there were no banned words in french lmao
 (german)
 (spanish)
 (danish)
@@ -22,4 +23,5 @@
    "Nigel Tufnel"
    "Brian May"
    "John Deacon"
-   "Roger Taylor")
+   "Roger Taylor"
+)
