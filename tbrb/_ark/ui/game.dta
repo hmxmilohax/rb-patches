@@ -207,11 +207,21 @@
       {handle ($this my_enter)}
       {input_mgr set_limit kLimitSession}
       ;venue fps setup
-      #ifdef HX_PS3
-      {unless $dx_ps3hw
-         {$world iterate PostProc $p {$p set emulate_fps 60}}  ; force 60fps on rpcs3
+      {$world iterate PostProc $p
+         {$p set emulate_fps
+            {if_else {== {meta_performer get_venue} dreamscape}
+               60  ; 60fps dreamscapes always
+               #ifdef HX_PS3
+               {if_else $dx_ps3hw
+                  30
+                  60  ; 60fps all other venues on rpcs3
+               }
+               #else
+               30
+               #endif
+            }
+         }
       }
-      #endif
       {if [mic_removed_mid_setlist]
          {$this pause_for_mic}
       }
