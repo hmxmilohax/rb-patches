@@ -351,6 +351,7 @@
          {if {== $action kAction_Left}
             {$this dec_speed}
          }
+         ; dx - select to restart
          {if {== $action kAction_ViewModify}
             {gamemode on_pause_restart}
          }

@@ -636,8 +636,12 @@
    (unload {movie_panel unload})
    (is_loaded {fx is_faded_out})
    (enter
+      {rnd set_sync 1}
       {meta music_stop}
       {platform_mgr disable_xmp}
+   )
+   (exit
+      {rnd set_sync $dx_vsync}
    )
    (movie_done {ui goto_screen credits_screen})
    (BUTTON_DOWN_MSG
@@ -690,6 +694,12 @@
    (audio TRUE)
    (update_presence TRUE)
    (videos attract)
+   (enter
+      {rnd set_sync 1}
+   )
+   (exit
+      {rnd set_sync $dx_vsync}
+   )
    (movie_done
       {if {== {ui current_screen} attract_screen}
          {ui goto_screen splash_screen}

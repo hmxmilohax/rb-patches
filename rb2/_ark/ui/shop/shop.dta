@@ -18,6 +18,7 @@
       {$this set_ui_showing TRUE}
       {synth play rockshop_amb.cue}
       {set_loader_period 7}
+      #ifdef HX_XBOX DX_FPS_SETUP #endif
       ; dx - no 30fps in here
       ;#ifdef HX_PS3
       ;{rnd set_sync 2}

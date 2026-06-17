@@ -419,7 +419,7 @@
    (enter
       ;venue fps setup
       #ifdef _SHIP
-      DX_FPS_SETUP
+      {{$world iterate PostProc $p {unless {== $p "photocopy.pp"} {$p set emulate_fps $emulatefps}}}}
       #endif
       {if
          {gamemode get load_chars}

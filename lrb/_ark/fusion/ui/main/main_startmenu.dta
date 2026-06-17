@@ -55,7 +55,6 @@
          {int
             [alpha_threshold]}})
    (enter
-      ;{profile_mgr set_overscan TRUE}
       ;{main_LegoLogo.tex set_bitmap "dx/custom_textures/main/lego_dx_rb.png"}
       ;{main_rblogo.tex set_bitmap "dx/custom_textures/main/lego_dx_lego.png"}
       ;{Main_RockBand_TM_Glow.mesh set_showing FALSE}
@@ -242,7 +241,10 @@
          {synth play button_select}
          {$this move_on}})
    (enter
-      {profile_mgr set_overscan TRUE}
+      {unless $dx_overscan_forced 
+         {profile_mgr set_overscan TRUE}
+         {set $dx_overscan_forced TRUE}
+      }
       {rnd set_sync 1})
    (exit
       {rnd set_sync $dx_vsync})

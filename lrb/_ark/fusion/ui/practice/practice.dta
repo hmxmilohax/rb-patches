@@ -529,8 +529,10 @@
          {if
             {== $action kAction_Left}
             {$this dec_speed}}}
-         {&& {== $action kAction_ViewModify} {gamemode get is_practice} ;it couldn't be something obvious like kAction_Select, thanks hmx
-            {gamemode on_pause_restart}} ;attempt at select to restart section
+         ; dx - select to restart
+         {if {== $action kAction_ViewModify}
+            {gamemode on_pause_restart}
+         }
 )
    (inc_speed
       {set

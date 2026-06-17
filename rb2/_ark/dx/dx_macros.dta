@@ -67,6 +67,11 @@
    }
 )
 
+#define DX_FPS_SETUP
+(
+   {$world iterate PostProc $p {unless {== $p "photocopy.pp"} {$p set emulate_fps {if_else {in_video_venue} 60 $emulatefps}}}}  ; always use 60fps on mvs
+)
+
 #define VENUES (
    #ifndef MINIMAL_VENUES
    small_club_01

@@ -13,10 +13,10 @@
    (file
       "practice_space.milo")
    (enter
-      DX_FPS_SETUP
       {$this refresh}
       {meta music_stop}
       {synth play bwt_practice_amb.cue}
+      #ifdef HX_XBOX DX_FPS_SETUP #endif
       ;#ifdef HX_PS3
       ;{rnd set_sync 2}
       ;#endif

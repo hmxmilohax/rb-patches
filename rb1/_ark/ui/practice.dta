@@ -656,7 +656,7 @@
             {ui
                push_screen
                {gamemode get pause_screen}}}
-            {if {&& {== $button kPad_Select} {session end_game kRestart}}}}
+         {if {== $button kPad_Select} {session end_game kRestart}}}
       kDataUnhandled)
    (poll
       {if
