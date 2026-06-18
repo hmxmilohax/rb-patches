@@ -42,6 +42,11 @@
             {elem {find $entry venue_fps} 1}
          }
       }
+      {if {== {elem $entry 0} {basename video_venue_fps}}
+         {set $mvemulatefps
+            {elem {find $entry video_venue_fps} 1}
+         }
+      }
       #ifdef HX_PS3
       {if {== {elem $entry 0} {basename vsync}}
          {set $dx_vsync
@@ -69,7 +74,7 @@
 
 #define DX_FPS_SETUP
 (
-   {$world iterate PostProc $p {unless {== $p "photocopy.pp"} {$p set emulate_fps {if_else {in_video_venue} 60 $emulatefps}}}}  ; always use 60fps on mvs
+   {$world iterate PostProc $p {unless {== $p "photocopy.pp"} {$p set emulate_fps {if_else {in_video_venue} $mvemulatefps $emulatefps}}}}
 )
 
 #define VENUES (

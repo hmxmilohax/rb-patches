@@ -30,6 +30,10 @@
 (venue_fps
    (venue_fps 30)
 )
+; Music Video Venue FPS (Vanilla: 24, hardware can handle 60)
+(video_venue_fps
+   (video_venue_fps 60)
+)
 ; Instrument slot mapping (Options: kControllerVocals, kControllerGuitar, kControllerDrum)
 (pad_slot
    (pad_slot kControllerVocals)

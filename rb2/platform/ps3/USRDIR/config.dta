@@ -30,6 +30,10 @@
 (venue_fps
    (venue_fps 30)
 )
+; Music Video Venue FPS (Vanilla: 24, hardware can handle 60)
+(video_venue_fps
+   (video_venue_fps 60)
+)
 ; Vsync (0: Uncapped FPS, 1: 60FPS, only set to 0 on RPCS3!)
 (vsync
    (vsync 1)

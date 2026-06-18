@@ -95,10 +95,10 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 	- Track Speed
 	- Sync Difficulty Speeds
 	- Venue FPS
+	- Music Video Venue FPS (default 60)
 	- Vsync
 	- Instrument Slots
 - More stable with a large song lbrary than vanilla Rock Band 2
-- Music Video venues are always 60FPS
 - Vocal practice mode
 - Expanded career from [Rock Band 2 Deluxe](https://rb2dx.milohax.org/), and some of its additional venues
 - Leaving mid-gig does not make you lose fans

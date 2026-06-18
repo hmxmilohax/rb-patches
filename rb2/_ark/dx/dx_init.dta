@@ -3,6 +3,7 @@
 {set $dx_guitar_slot kControllerGuitar}
 {set $dx_drum_slot kControllerDrum}
 {set $emulatefps 30}
+{set $mvemulatefps 60}
 {set $dx_vsync TRUE}
 {set $trackspeed 1.0}
 
