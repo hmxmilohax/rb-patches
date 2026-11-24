@@ -10,14 +10,9 @@
 INIT_DTA_READER
 
 {set $dxsettings {load_objects #ifdef HX_XBOX "GAME:/config.milo" #else "GD:/dev_hdd0/game/BLUS30147/USRDIR/config.milo" #endif}}
-{if_else $dxsettings
-   {do
-      LOAD_DX_SETTINGS
-      {delete $dxsettings}
-   }
-   {do
-      SAVE_DX_SETTINGS
-   }
+{if $dxsettings
+   LOAD_DX_SETTINGS
+   {delete $dxsettings}
 }
 
 {rnd set_sync $dx_vsync}
