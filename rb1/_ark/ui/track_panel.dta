@@ -51,14 +51,6 @@
       {{$this loaded_dir} reset}
    )
    (on_extend
-      ; dx - black background
-      {world_panel set_showing {! $dx_black_background}}
-      {handle
-         ({get_track_panel}
-            set_showing
-            {! $dx_performance_mode}
-         )
-      }
       {$this play_intro}
       {if {&& {exists gamemode} {gamemode get play_track_intro_sfx}}
          {synth play track_beg.cue}

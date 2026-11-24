@@ -35,7 +35,6 @@
          (delay {- {taskmgr beat}})
          (script {handle ($this intro_end)})
       }
-      {world_panel set_showing {! $dx_black_background}}  ; dx - set black background from config.dta
       kDataUnhandled
    )
    (intro_skip {$this start_game} kDataUnhandled)
@@ -216,12 +215,6 @@
    (enter
       ; venue fps setup
       DX_FPS_SETUP
-      ; enable autoplay
-      {if $dx_autoplay
-         {beatmatch foreach_active_player $player
-            {$player set_auto_play enable}
-         }
-      }
       {set [delayed_mic_check] FALSE}
       {rnd set_in_game TRUE}
       {session add_sink $this start_game_msg}

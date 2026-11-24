@@ -165,16 +165,6 @@
       }
    )
    (downbeat
-      ; dx - autoplay can activate
-      {unless $dx_performance_mode
-         {if $dx_autoplay
-            {beatmatch foreach_active_player $player
-               {unless {mod $measure 4}
-                  {$player deploy_if_possible}
-               }
-            }
-         }
-      }
       {if_else $world
          {handle ($world downbeat)}
          {handle (game downbeat)}

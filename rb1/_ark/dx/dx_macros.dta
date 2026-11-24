@@ -17,21 +17,6 @@
             {elem {find $entry venue_fps} 1}
          }
       }
-      {if {== {elem $entry 0} {basename black_background}}
-         {set $dx_black_background
-            {elem {find $entry black_background} 1}
-         }
-      }
-      {if {== {elem $entry 0} {basename performance_mode}}
-         {set $dx_performance_mode
-            {elem {find $entry performance_mode} 1}
-         }
-      }
-      {if {== {elem $entry 0} {basename autoplay}}
-         {set $dx_autoplay
-            {elem {find $entry autoplay} 1}
-         }
-      }
       #ifdef HX_PS3
       {if {== {elem $entry 0} {basename vsync}}
          {set $dx_vsync
@@ -55,7 +40,6 @@
          }
       }
    }
-   {if $dx_autoplay {profile_mgr unlock_all_songs}}
 )
 
 #define DX_FPS_SETUP

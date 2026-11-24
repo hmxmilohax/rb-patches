@@ -13,18 +13,6 @@
 (venue_fps
    (venue_fps 30)
 )
-; Black Background - Completely black background in-game
-(black_background
-   (black_background 0)
-)
-; Performance Mode - Play the game without a track
-(performance_mode
-   (performance_mode 0)
-)
-; Autoplay - Disables saving, online
-(autoplay
-   (autoplay 0)
-)
 ; Instrument slot mapping (Options: kControllerVocals, kControllerGuitar, kControllerDrum)
 (pad_slot
    (pad_slot kControllerVocals)

@@ -76,9 +76,6 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 	- Track Speed
 	- Sync Difficulty Speeds
 	- Venue FPS
-	- Black Background
-	- Performance Mode
-	- Autoplay (disables saving, online)
 	- Vsync
 	- Instrument Slots
 - Vocal practice mode
