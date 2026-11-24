@@ -2,31 +2,6 @@
 (
    {set $dxsettings {read_file #ifdef HX_XBOX "GAME:/config.dta" #endif #ifdef HX_PS3 "GD:/dev_hdd0/game/BLUS30147/USRDIR/config.dta" #endif}}
    {foreach $entry $dxsettings
-      {if {== {elem $entry 0} {basename mod_nofail}}
-         {if {== {elem {find $entry mod_nofail} 1} 1}
-            {modifier_mgr activate_modifier mod_nofail}
-         }
-      }
-      {if {== {elem $entry 0} {basename mod_doublespeed}}
-         {if {== {elem {find $entry mod_doublespeed} 1} 1}
-            {modifier_mgr activate_modifier mod_doublespeed}
-         }
-      }
-      {if {== {elem $entry 0} {basename mod_choose_venue}}
-         {if {== {elem {find $entry mod_choose_venue} 1} 1}
-            {modifier_mgr activate_modifier mod_choose_venue}
-         }
-      }
-      {if {== {elem $entry 0} {basename mod_newvenuesonly}}
-         {if {== {elem {find $entry mod_newvenuesonly} 1} 1}
-            {modifier_mgr activate_modifier mod_newvenuesonly}
-         }
-      }
-      {if {== {elem $entry 0} {basename mod_awesome}}
-         {if {== {elem {find $entry mod_awesome} 1} 1}
-            {modifier_mgr activate_modifier mod_awesome}
-         }
-      }
       {if {== {elem $entry 0} {basename track_speed}}
          {set $trackspeed
             {elem {find $entry track_speed} 1}
@@ -70,6 +45,26 @@
          }
       }
    }
+)
+
+#define LOAD_DX_SETTINGS
+(
+   {if {$dxsettings get mod_nofail} {modifier_mgr activate_modifier mod_nofail}}
+   {if {$dxsettings get mod_doublespeed} {modifier_mgr activate_modifier mod_doublespeed}}
+   {if {$dxsettings get mod_choose_venue} {modifier_mgr activate_modifier mod_choose_venue}}
+   {if {$dxsettings get mod_newvenuesonly} {modifier_mgr activate_modifier mod_newvenuesonly}}
+   {if {$dxsettings get mod_awesome} {modifier_mgr activate_modifier mod_awesome}}
+)
+
+#define SAVE_DX_SETTINGS
+(
+   {new ObjectDir dxsettings}
+   {dxsettings set mod_nofail {modifier_mgr is_modifier_active mod_nofail}}
+   {dxsettings set mod_doublespeed {modifier_mgr is_modifier_active mod_doublespeed}}
+   {dxsettings set mod_choose_venue {modifier_mgr is_modifier_active mod_choose_venue}}
+   {dxsettings set mod_newvenuesonly {modifier_mgr is_modifier_active mod_newvenuesonly}}
+   {dxsettings set mod_awesome {modifier_mgr is_modifier_active mod_awesome}}
+   {dxsettings save_objects #ifdef HX_XBOX "GAME:/config.milo" #else "GD:/dev_hdd0/game/BLUS30147/USRDIR/config.milo" #endif}
 )
 
 #define DX_FPS_SETUP

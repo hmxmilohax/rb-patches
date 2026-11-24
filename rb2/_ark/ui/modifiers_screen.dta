@@ -11,6 +11,7 @@
       {memcardmgr add_sink $this (save_load_all_complete_msg)}
    )
    (exit
+      SAVE_DX_SETTINGS
       {profile_mgr remove_sink $this profile_changed_msg}
       {memcardmgr remove_sink $this save_load_all_complete_msg}
    )

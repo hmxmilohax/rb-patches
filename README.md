@@ -91,13 +91,13 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 >
 > If you're looking for a better option for the casual fan, check out [Rock Band 2 Deluxe](https://rb2dx.milohax.org/) instead.
 - Adjustable options via external `config.dta` file:
-	- Most modifiers
 	- Track Speed
 	- Sync Difficulty Speeds
 	- Venue FPS
 	- Music Video Venue FPS (default 60)
 	- Vsync
 	- Instrument Slots
+- Most modifiers save
 - More stable with a large song lbrary than vanilla Rock Band 2
 - Vocal practice mode
 - Expanded career from [Rock Band 2 Deluxe](https://rb2dx.milohax.org/), and some of its additional venues
