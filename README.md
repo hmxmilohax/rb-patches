@@ -102,6 +102,7 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 - All prefabs available
 - No Fail Mode can be used without penalty
 - Unlock All Songs can be used online
+- Left/Right scrolls up/down by 10 in setlist
 - Main Menu is 60FPS on Xbox 360 (previously PS3 only)
 - Menus on PS3 use the full vsync rate everywhere
 - DLC loading doesn't interrupt menu usage
@@ -114,6 +115,7 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 - Dreamscapes are 60FPS always
 - All venues are 60FPS on RPCS3
 - "Super Speed" (Breakneck Speed) in Practice mode and Drum Trainer
+- Left/Right scrolls up/down by 10 in setlist
 
 ### GDRB:
 
@@ -122,6 +124,7 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 - "Super Speed" (Breakneck Speed) in Practice mode and Drum Trainer
 - DIY stems for "Chump" and "Longview" re-done with modern technology [by dirk](https://github.com/dirkNlerxst/dirks-rb3-customs/tree/main/MOGG%20Replacements)
 - Main Menu is 60FPS on Xbox 360 (previously PS3 only)
+- Left/Right scrolls up/down by 10 in setlist
 
 ### LRB:
 
@@ -138,4 +141,5 @@ Lightweight patches to vanilla RB games that add small quality-of-life improveme
 - All Rock Shop items unlocked
 - Holiday DLC minifigures
 - Vocal practice mode
+- Left/Right scrolls up/down by 10 in setlist
 - Compatible with the PS3 EU 1.0 debug build via patchcreator
