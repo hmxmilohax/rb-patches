@@ -18,7 +18,7 @@
          (main (size 390900000))
          (server_login (size 100000))
          #else
-         (main (size 145000000))  ; dx - 5mb larger, matches rb3dx main+char - vanilla 140000000
+         (main (size 151000000)) ; dx - 11mb higher than vanilla to match 3dx's total mem allocation - vanilla 140000000
          (server_login (size 100000))
          #endif
       #endif
